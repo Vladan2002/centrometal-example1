@@ -1,0 +1,150 @@
+.main-container{
+  width: 74%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 13% 0 13%;
+  .ads-div{
+    width: 25%;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    gap: 40px;
+
+    .menu{
+      width: 100%;
+      margin-top:20px;
+      display: flex;
+      flex-direction: column;
+      i{
+        width: 10px;
+        height: 10px;
+        color: white;
+      }
+      button{
+        display: flex;
+
+        padding: 15px 4%;
+        border: none;
+        background-color: #F4F4F4;
+        border-bottom: 1px solid #E1E1E1;
+        justify-content: space-between;
+
+        font-size: 15px;
+        font-weight: bold;
+
+        p{
+          padding: 0;
+          margin: 0;
+          text-transform: uppercase;
+
+        }
+        &:hover{
+          transform:scale(1.05);
+          transition: 0.5s;
+          border: 1px solid #E1E1E1;
+        }
+      }
+
+      >button:first-child{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        background-color: #005474;
+        color: white;
+        img{
+          margin:0 7px;
+          height: 18px;
+          width: 18px;
+        }
+      }
+
+    }
+  }
+  .products{
+  width: 75%;
+    border: 1px solid black;
+  }
+}
+
+.deactivate-button{
+  display: none !important;
+}
+
+.search-brand{
+  width: 80%;
+  padding: 15px 10%;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #005474;
+  height: 60px;
+  input{
+    width: 100%;
+    border: none;
+    height: 30px;
+    margin-top: 10px;
+  }
+  i.magnify{
+    margin-left: -30px;
+    color: #0BA2D6;
+  }
+}
+.ad{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  >p:first-of-type{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 50px;
+    white-space: nowrap;
+    font-style: italic;
+
+  }
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-99%, 30%);
+    color: white;
+    font-size: 50px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.newsletter{
+  width: 80%;
+  padding: 15px 10%;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #005474;
+  p{
+    white-space: nowrap;
+  }
+
+  input{
+    width: 100%;
+    border: none;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid #00A9EA;
+    padding: 10px 0 ;
+    &::placeholder{
+      color: white;
+    }
+  }
+}
