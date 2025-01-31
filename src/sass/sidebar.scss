@@ -7,7 +7,6 @@
   .ads-div{
     width: 25%;
     display: flex;
-    border: 1px solid black;
     flex-direction: column;
     gap: 40px;
 
@@ -147,4 +146,32 @@
       color: white;
     }
   }
+}
+.makita-post{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  img{
+    margin:0 10%;
+    width: 80%;
+    height: 200px;
+  }
+  h5{
+    font-size: 20px;
+    margin: 0;
+  }
+
+}
+
+.button__blue{
+  width: 130px;
+  height: 30px;
+  border: none;
+  background-color: #00A9EA;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 10px;
+
 }

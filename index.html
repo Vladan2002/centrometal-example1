@@ -80,7 +80,7 @@
 
     </div>
     <div class="ad">
-        <img src="assets/cipele.jpg" alt="">
+        <img src="src/assets/cipele.jpg" alt="">
         <p>Fashion cipele</p>
         <p>Veneno</p>
 
@@ -92,36 +92,22 @@
         </p>
         <input type="text" placeholder="Ime i prezime">
         <input type="text" placeholder="Email">
+        <button class="button__blue">Prijavi se</button>
+    </div>
+    <div class="makita-post">
+        <img src="src/assets/makita.jpg" alt="">
+        <h5>Lorem ipsum dolor sit amet.</h5>
+        <p>consectetur adipisicing elit.
+            Aperiam commodi cumque dicta,  dignissimos,
+            dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus reprehenderit repudiandae.</p>
+        <button class="button__blue">Opširnije</button>
     </div>
 </div>
+
+
 <div class="products"></div>
 </div>
 </body>
 
-<script>
-
-    function categories() {
-        let buttons = document.querySelectorAll("#menu button");
-
-        for (let i = 1; i < buttons.length; i++) {
-            if (buttons[i].classList.contains("deactivate-button")) {
-                buttons[i].classList.remove("deactivate-button");
-            } else {
-                buttons[i].classList.add("deactivate-button");
-            }
-        }
-    }
-    function navbar(element) {
-        let a = document.querySelectorAll("#select-menu a");
-        console.log(a);
-        for (let i = 0; i < a.length; i++) {
-            if (a[i].classList.contains("active")) {
-                a[i].classList.remove("active");
-            }
-        }
-        element.classList.add("active");
-
-    }
-
-</script>
+<script src="src/scripts/index-page.js"></script>
 </html>
