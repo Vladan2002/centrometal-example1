@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="gray-navbar">
+    <div class="left-side"><p>Engleski</p>   <p> Crnogorski </p>    <p> Svakog dana od 08:00 do 21:00 h, osim nedeljom Tel: +382 20 656 772</p></div>
+    <div class="right-side"><p>On-line Podrska </p><p> Registracija</p> <p> Prijava</p></div>
+</div>
+<header class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <span class="stretch">CENTRO</span><span  class="stretch">METAL</span>
+            </div>
+
+
+        </div>
+        <div class="header-right"> <input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
+            <i class="fa-solid fa-magnifying-glass magnify"></i>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="korpa" >MOJA KORPA</a>
+            <p>0.00$</p>
+
+            <a href="#" style="background-color:#0BA2D6;" ><i class="fa-solid fa-cart-shopping korpa"></i></a></div>
+
+    </div>
+</header>
+
+<div class="small-nav">
+    <div class="trapezoid-left"></div>
+    <div class="select-menu" id="select-menu">
+        <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
+        <a href="#" onclick="navbar(this)">Akcija</a>
+        <a href="#" onclick="navbar(this)">Rasprodaja</a>
+        <a href="#" onclick="navbar(this)">Katalozi</a>
+        <a href="#" onclick="navbar(this)">Novosti</a>
+        <a href="#" onclick="navbar(this)">O nama</a>
+        <a href="#" onclick="navbar(this)">Uradi sam</a>
+        <a href="#" onclick="navbar(this)">Vip kartica</a>
+        <a href="#" onclick="navbar(this)">Kontakt</a>
+        <a href="#">
+            <p>Informacije</p> <br>
+            <p>tel: 020 123 456</p>
+        </a>
+    </div>
+    <div class="trapezoid-right"></div>
+
+</div>
+<div class="main-container">
+<div class="ads-div">
+    <div class="menu" id="menu">
+        <button onclick="categories()"><img src="assets/grid.png" alt="">Kupuj po kategoriji</button>
+        <button><p>Bijela Tehnika</p> <p>+</p></button>
+        <button><p>Ugradna Tehnika</p> <p>+</p></button>
+        <button><p>Klimatizacija i grijanje</p></button>
+        <button><p>Mali kućni aparati</p><p>+</p></button>
+        <button><p>TV i video</p><p>+</p></button>
+        <button><p>Audio</p><p>+</p></button>
+        <button><p>Telefonija</p><p>+</p></button>
+        <button><p>Kamere i foto aparati</p></button>
+        <button><p>Auto tehnika</p></button>
+        <button><p>Računari i periferije</p></button>
+        <button><p>Konzole i igrice</p></button>
+        <button><p>Posteljine</p></button>
+        <button><p>Kupovina preko t-coma</p></button>
+
+    </div>
+
+    <div class="search-brand">
+        <i class="fa-solid fa-envelope"></i>
+        Pretraži po brendu
+        <input type="text">
+        <i class="fa-solid fa-magnifying-glass magnify"></i>
+
+    </div>
+    <div class="ad">
+        <img src="assets/cipele.jpg" alt="">
+        <p>Fashion cipele</p>
+        <p>Veneno</p>
+
+    </div>
+    <div class="newsletter">
+        <p>
+        <i class="fa-solid fa-envelope"></i>
+        prijavi se na newsletter
+        </p>
+        <input type="text" placeholder="Ime i prezime">
+        <input type="text" placeholder="Email">
+    </div>
+</div>
+<div class="products"></div>
+</div>
+</body>
+
+<script>
+
+    function categories() {
+        let buttons = document.querySelectorAll("#menu button");
+
+        for (let i = 1; i < buttons.length; i++) {
+            if (buttons[i].classList.contains("deactivate-button")) {
+                buttons[i].classList.remove("deactivate-button");
+            } else {
+                buttons[i].classList.add("deactivate-button");
+            }
+        }
+    }
+    function navbar(element) {
+        let a = document.querySelectorAll("#select-menu a");
+        console.log(a);
+        for (let i = 0; i < a.length; i++) {
+            if (a[i].classList.contains("active")) {
+                a[i].classList.remove("active");
+            }
+        }
+        element.classList.add("active");
+
+    }
+
+</script>
+</html>
