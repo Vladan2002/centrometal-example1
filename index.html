@@ -56,7 +56,9 @@
 <div class="ads-div">
     <div class="menu" id="menu">
         <button onclick="categories()"><img src="src/assets/grid.png" alt="">Kupuj po kategoriji</button>
-        <button><p>Bijela Tehnika</p> <p>+</p></button>
+        <button onclick="toggleSubcategories('bijela-tehnika')"><p>Bijela Tehnika</p> <p>+</p></button>
+        <button class="button__subcategory deactivate-button" data-category="bijela-tehnika"><p>Sporet Tehnika</p> <p>+</p></button>
+        <button class="button__subcategory deactivate-button" data-category="bijela-tehnika"><p>Frizider Tehnika</p> <p>+</p></button>
         <button><p>Ugradna Tehnika</p> <p>+</p></button>
         <button><p>Klimatizacija i grijanje</p></button>
         <button><p>Mali kućni aparati</p><p>+</p></button>
@@ -110,4 +112,12 @@
 </body>
 
 <script src="src/scripts/index-page.js"></script>
+<script>function toggleSubcategories(category) {
+    const subcategories = document.querySelectorAll(`.button__subcategory[data-category="${category}"]`);
+
+    subcategories.forEach(sub => {
+        sub.classList.toggle('deactivate-button');
+    });
+}
+</script>
 </html>

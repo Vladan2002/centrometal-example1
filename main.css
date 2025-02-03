@@ -344,6 +344,14 @@ header .container .header-right p {
   padding: 0 10px;
 }
 
+.button__subcategory {
+  background-color: lightgray !important;
+  padding-left: 15% !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  margin: 0 8px !important;
+}
+
 /* endinject */
 
 /*# sourceMappingURL=main.css.map */
