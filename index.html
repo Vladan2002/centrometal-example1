@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="gray-navbar">
+    <div class="left-side"><p>Engleski</p>   <p> Crnogorski </p>    <p> Svakog dana od 08:00 do 21:00 h, osim nedeljom Tel: +382 20 656 772</p></div>
+    <div class="right-side"><p>On-line Podrska </p><p> Registracija</p> <p> Prijava</p></div>
+</div>
+<header class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <span class="stretch">CENTRO</span><span  class="stretch">METAL</span>
+            </div>
+
+
+        </div>
+        <div class="header-right"> <input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
+            <i class="fa-solid fa-magnifying-glass magnify"></i>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="korpa" >MOJA KORPA</a>
+            <p>0.00$</p>
+
+            <a href="#" style="background-color:#0BA2D6;" ><i class="fa-solid fa-cart-shopping korpa"></i></a></div>
+
+    </div>
+</header>
+
+<div class="small-nav">
+    <div class="trapezoid-left"></div>
+    <div class="select-menu" id="select-menu">
+        <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
+        <a href="#" onclick="navbar(this)">Akcija</a>
+        <a href="#" onclick="navbar(this)">Rasprodaja</a>
+        <a href="#" onclick="navbar(this)">Katalozi</a>
+        <a href="#" onclick="navbar(this)">Novosti</a>
+        <a href="#" onclick="navbar(this)">O nama</a>
+        <a href="#" onclick="navbar(this)">Uradi sam</a>
+        <a href="#" onclick="navbar(this)">Vip kartica</a>
+        <a href="#" onclick="navbar(this)">Kontakt</a>
+        <a href="#">
+            <p>Informacije</p> <br>
+            <p>tel: 020 123 456</p>
+        </a>
+    </div>
+    <div class="trapezoid-right"></div>
+
+</div>
+<div class="main-container">
+<div class="ads-div">
+    <div class="menu" id="menu">
+        <button onclick="categories()"><img src="src/assets/grid.png" alt="">Kupuj po kategoriji</button>
+        <button><p>Bijela Tehnika</p> <p>+</p></button>
+        <button><p>Ugradna Tehnika</p> <p>+</p></button>
+        <button><p>Klimatizacija i grijanje</p></button>
+        <button><p>Mali kućni aparati</p><p>+</p></button>
+        <button><p>TV i video</p><p>+</p></button>
+        <button><p>Audio</p><p>+</p></button>
+        <button><p>Telefonija</p><p>+</p></button>
+        <button><p>Kamere i foto aparati</p></button>
+        <button><p>Auto tehnika</p></button>
+        <button><p>Računari i periferije</p></button>
+        <button><p>Konzole i igrice</p></button>
+        <button><p>Posteljine</p></button>
+        <button><p>Kupovina preko t-coma</p></button>
+
+    </div>
+
+    <div class="search-brand">
+        <i class="fa-solid fa-envelope"></i>
+        Pretraži po brendu
+        <input type="text">
+        <i class="fa-solid fa-magnifying-glass magnify"></i>
+
+    </div>
+    <div class="ad">
+        <img src="src/assets/cipele.jpg" alt="">
+        <p>Fashion cipele</p>
+        <p>Veneno</p>
+
+    </div>
+    <div class="newsletter">
+        <p>
+        <i class="fa-solid fa-envelope"></i>
+        prijavi se na newsletter
+        </p>
+        <input type="text" placeholder="Ime i prezime">
+        <input type="text" placeholder="Email">
+        <button class="button__blue">Prijavi se</button>
+    </div>
+    <div class="makita-post">
+        <img src="src/assets/makita.jpg" alt="">
+        <h5>Lorem ipsum dolor sit amet.</h5>
+        <p>consectetur adipisicing elit.
+            Aperiam commodi cumque dicta,  dignissimos,
+            dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus reprehenderit repudiandae.</p>
+        <button class="button__blue">Opširnije</button>
+    </div>
+    <div class="makita-post">
+        <img src="src/assets/makita.jpg" alt="">
+        <h5>Lorem ipsum dolor sit amet.</h5>
+        <p>consectetur adipisicing elit.
+            Aperiam commodi cumque dicta,  dignissimos,
+            dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus reprehenderit repudiandae.</p>
+        <button class="button__blue">Opširnije</button>
+    </div>
+    <div class="ad">
+        <img src="src/assets/rostilj.jpg" alt="">
+        <p>Fashion cipele</p>
+        <p>Veneno</p>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="products">
+    <div class="slide-show">
+
+    </div>
+    <div class="trapez-div">
+        <a>
+            <div class="trapez trapez____darkblue"> <p><i class="fa-solid fa-fire"></i> Vruća ponuda</p></div>
+        </a>
+    </div>
+    <div class="popusti">
+    <div class="product-bar">
+        <div class="product-card">
+            <div class="product-img">
+                <img src="src/assets/zasudje.png" alt="">
+                <div class="badge">20%</div>
+            </div>
+            <h5>Ugradni frižider</h5>
+            <span class="timer">10 dan 6 sat 15 min 10 sec</span>
+            <div class="price">
+                <span class="old-price">$150.00</span>
+                <span class="new-price">$90.00</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="src/assets/sega.png" alt="">
+                <div class="badge">30%</div>
+            </div>
+            <h5>Ugradni frizider</h5>
+            <span class="timer">10dan 6 sat 15 min 10 sec</span>
+            <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="src/assets/frizider.png" alt="">
+                <div class="badge">40%</div>
+            </div>
+            <h5>Ugradni frizider</h5>
+            <span class="timer">10dan 6 sat 15 min 10 sec</span>
+            <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+        </div>
+        <div class="product-card">
+            <div class="product-img">
+                <img src="src/assets/sporet.png" alt="">
+                <div class="badge">90%</div>
+            </div>
+            <h5>Ugradni frizider</h5>
+            <span class="timer">10dan 6 sat 15 min 10 sec</span>
+            <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+        </div>
+    </div>
+        <button>Pogledajte sve proizvode iz vruce ponude</button>
+
+    </div>
+
+    <div class="trapez-div">
+    <a>
+    <div class="trapez"> <p><i class="fa-solid fa-tag fa-rotate-90"></i> AKCIJA - POPUSTI</p></div>
+    </a>
+    </div>
+    <div class="popusti">
+        <div class="product-bar">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sporet.png" alt="">
+                    <div class="badge">20%</div>
+                </div>
+                <h5>Ugradni frižider</h5>
+                <span class="timer">10 dan 6 sat 15 min 10 sec</span>
+                <div class="price">
+                    <span class="old-price">$150.00</span>
+                    <span class="new-price">$90.00</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sokovnik.png" alt="">
+                    <div class="badge">30%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sega.png" alt="">
+                    <div class="badge">40%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/vesmasina.png" alt="">
+                    <div class="badge">90%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+
+
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/frizider.png" alt="">
+                    <div class="badge">20%</div>
+                </div>
+                <h5>Ugradni frižider</h5>
+                <span class="timer">10 dan 6 sat 15 min 10 sec</span>
+                <div class="price">
+                    <span class="old-price">$150.00</span>
+                    <span class="new-price">$90.00</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/zasudje.png" alt="">
+                    <div class="badge">30%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/pegla.png" alt="">
+                    <div class="badge">40%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sokovnik.png" alt="">
+                    <div class="badge">90%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+
+
+        </div>
+        <button>Pogledajte sve proizvode iz vruce ponude</button>
+    </div>
+    <div class="trapez-div">
+        <a>
+            <div class="trapez"> <p><i class="fa-solid fa-star"></i> Preporucujemo</p></div>
+        </a>
+    </div>
+
+
+
+
+    <div class="popusti">
+        <div class="product-bar">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sega.png" alt="">
+                    <div class="badge">20%</div>
+                </div>
+                <h5>Ugradni frižider</h5>
+                <span class="timer">10 dan 6 sat 15 min 10 sec</span>
+                <div class="price">
+                    <span class="old-price">$150.00</span>
+                    <span class="new-price">$90.00</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/zasudje.png" alt="">
+                    <div class="badge">30%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/mikrotalasna.png" alt="">
+                    <div class="badge">40%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/vesmasina.png" alt="">
+                    <div class="badge">90%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+        </div>
+        <button>Pogledajte sve proizvode iz vruce ponude</button>
+
+    </div>
+
+    <div class="trapez-div">
+        <a>
+            <div class="trapez"> <p><i class="fa-solid fa-heart"></i> Novo u ponudi</p></div>
+        </a>
+    </div>
+
+
+
+
+    <div class="popusti">
+        <div class="product-bar">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sokovnik.png" alt="">
+                    <div class="badge">20%</div>
+                </div>
+                <h5>Ugradni frižider</h5>
+                <span class="timer">10 dan 6 sat 15 min 10 sec</span>
+                <div class="price">
+                    <span class="old-price">$150.00</span>
+                    <span class="new-price">$90.00</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sporet.png" alt="">
+                    <div class="badge">30%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/pegla.png" alt="">
+                    <div class="badge">40%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/frizider.png" alt="">
+                    <div class="badge">90%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+        </div>
+        <button>Pogledajte sve proizvode iz vruce ponude</button>
+
+    </div>
+
+    <div class="trapez-div">
+        <a>
+            <div class="trapez trapez____yellow"> <p><i class="fa-solid fa-sun"></i> Rasprodaja</p></div>
+        </a>
+    </div>
+
+
+
+
+
+    <div class="popusti">
+        <div class="product-bar">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/frizider.png" alt="">
+                    <div class="badge">20%</div>
+                </div>
+                <h5>Ugradni frižider</h5>
+                <span class="timer">10 dan 6 sat 15 min 10 sec</span>
+                <div class="price">
+                    <span class="old-price">$150.00</span>
+                    <span class="new-price">$90.00</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/mikrotalasna.png" alt="">
+                    <div class="badge">30%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/zasudje.png" alt="">
+                    <div class="badge">40%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="src/assets/sega.png" alt="">
+                    <div class="badge">90%</div>
+                </div>
+                <h5>Ugradni frizider</h5>
+                <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                <div class="price"> <span class="old-price">$150.00</span><span class="new-price">$90.00</span> </div>
+            </div>
+        </div>
+        <button class="button__yellow">Pogledajte sve proizvode iz vruce ponude</button>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+    </div>
+
+
+</body>
+
+<script src="src/scripts/index-page.js"></script>
+</html>
