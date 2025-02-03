@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* sass:scss */
 body {
   margin: 0;
@@ -180,7 +181,6 @@ header .container .header-right p {
   width: 74%;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0 13% 0 13%;
 }
 .main-container .ads-div {
@@ -232,10 +232,6 @@ header .container .header-right p {
   margin: 0 7px;
   height: 18px;
   width: 18px;
-}
-.main-container .products {
-  width: 75%;
-  border: 1px solid black;
 }
 
 .deactivate-button {
@@ -342,6 +338,181 @@ header .container .header-right p {
   font-size: 14px;
   text-transform: uppercase;
   padding: 0 10px;
+}
+
+.button__subcategory {
+  background-color: red;
+}
+
+.products {
+  width: 75%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popusti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.popusti .product-card {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popusti .product-card:hover {
+  transform: scale(1.05);
+}
+.popusti .product-card img {
+  width: 150px;
+  aspect-ratio: 1/1.2;
+}
+.popusti .product-card .timer {
+  color: lightgray;
+}
+.popusti .product-card .price {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.popusti .product-card .old-price {
+  text-decoration: line-through;
+  font-size: 17px;
+  color: gray;
+  margin-right: 10px;
+}
+.popusti .product-card .new-price {
+  font-weight: bold;
+  font-size: 18px;
+  color: #01AEEE;
+}
+.popusti .product-card h5 {
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+.popusti .product-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+.popusti .badge {
+  position: absolute;
+  top: 5px;
+  right: -2px;
+  background-color: #E59D01;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 5px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.popusti .badge:after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 52%;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-right-color: #E59D01;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -5px;
+  margin-left: -8px;
+}
+.popusti .product-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popusti button {
+  padding: 10px 40px;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 16px;
+  border: 3px solid #01AEEE;
+  text-transform: uppercase;
+  color: #015575;
+}
+.popusti button:hover {
+  transform: scale(1.05);
+}
+
+.trapez-div {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.trapez-div a {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: calc(100% - 50px);
+  margin: 20px 0;
+  cursor: pointer;
+}
+.trapez-div a:hover {
+  transform: scale(1.05);
+}
+.trapez-div .trapez {
+  position: relative;
+  border-bottom: 40px solid #01AEEE;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 100%;
+  transform: rotate(180deg);
+}
+.trapez-div .trapez p {
+  white-space: nowrap;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  position: absolute; /* Omogućava precizno centriranje */
+  top: 50%; /* Pomera na 50% visine trapeza */
+  left: 50%; /* Pomera na 50% širine trapeza */
+  transform: translate(-50%, 50%) rotate(180deg);
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 500px) {
+  .trapez-div .trapez p {
+    font-size: 10px;
+    transform: translate(-50%, 100%) rotate(180deg);
+  }
+}
+
+.trapez____darkblue {
+  border-bottom: 40px solid #015575 !important;
+}
+
+.trapez____yellow {
+  border-bottom: 40px solid #E59D01 !important;
+}
+
+.button__yellow {
+  border: 3px solid #E59D01 !important;
 }
 
 /* endinject */
