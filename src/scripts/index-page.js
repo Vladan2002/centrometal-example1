@@ -41,3 +41,8 @@ function progress(value){
     div.style.width=`${value}%`;
 
 }
+
+function toggleMenu() {
+    var menu = document.getElementById("select-menu");
+    menu.classList.toggle("active");
+}

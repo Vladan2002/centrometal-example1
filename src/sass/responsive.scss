@@ -1,0 +1,233 @@
+@media (max-width: 1230px) {
+
+  .trapez-div{
+  font-size: 10px;
+}
+
+  .block {
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 70% !important;
+    height: auto !important;
+    width: auto !important;
+    min-width: auto !important;
+    padding: 10px 0 !important;
+
+    span {
+      font-size: 20px !important;
+      margin-bottom: 10px;
+      &:first-of-type {
+        font-weight: normal;
+      }
+    }
+    button {
+      padding: 5px 15px !important;
+    }
+  }
+
+  .slide-show {
+    padding: 0 !important;
+  }
+  .bx-wrapper {
+    width: 80%;
+    margin: 0 20px !important;
+    padding: 0 !important;
+  }
+  .progress-container {
+    margin: 0 20px !important;
+  }
+  .custom-pager {
+    right: 60px !important;
+  }
+
+  .headerrr {
+    .gray-navbar {
+      display: none;
+    }
+    header {
+      padding: 15px 0 35px 0;
+      .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .header-left {
+          justify-content: center;
+          margin-bottom: 5px;
+        }
+        .header-right {
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 2px;
+          .search {
+            flex-wrap: nowrap;
+          }
+          .buy {
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .main-container {
+    margin: 0 !important;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .ads-div {
+      width: 100%;
+    }
+    .products {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .product-card {
+    min-width: 100px;
+    img {
+      width: 100px !important;
+      aspect-ratio: 1/1.2;
+    }
+  }
+
+  .menu {
+    margin: 0 !important;
+  }
+  .popusti {
+    button {
+      padding: 10px 5px !important;
+    }
+  }
+  .ad {
+    display: none;
+  }
+  .trapez-div {
+    a {
+      margin: 20px 0 !important;
+    }
+  }
+  .burger-menu {
+    display: block !important;
+  }
+  .trapezoid-left, .trapezoid-right {
+    display: none !important;
+  }
+  .select-menu {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 135px;
+    left: 0;
+    width: 100% !important;
+    background-color: #00ADF0;
+    z-index: 999;
+  }
+  .select-menu a {
+    display: block;
+    text-align: center;
+    padding: 15px 0 !important;
+    border: none;
+    border-bottom: 1px solid #009AD9;
+    width: 100%;
+    &:first-child {
+      display: none;
+    }
+  }
+  .select-menu.active {
+    display: flex !important;
+  }
+
+  .slider-two {
+    width: 100% !important;
+    padding: 0 !important;
+    .bx-wrapper {
+      width: 80% !important;
+      margin: 0 10% !important;
+    }
+  }
+
+  .magnify {
+    display: none !important;
+  }
+
+  .product-information {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider-container {
+    width: 100% !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    .bx-wrapper {
+      width: 40% !important;
+      margin: auto !important;
+    }
+  }
+
+  .product-description {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #bx-pager a {
+    width: 8% !important;
+  }
+
+  .product-infos div {
+    border-right: 1px solid #ccc;
+  }
+
+  .main-container-product {
+    margin: 0 !important;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .product-description {
+      width: 100%;
+      padding-left: 0;
+    }
+    .left-side {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      h1 {
+        font-size: 35px;
+      }
+    }
+    .right-side {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+
+  .footer {
+    width: 100% !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 !important;
+      border: 0;
+    }
+  }
+}

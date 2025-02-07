@@ -63,44 +63,57 @@ header{
     }
     .header-right{
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       width: 58%;
 
-      .magnify{
-        margin-left: -50px;
-        color: #0BA2D6;
-        margin-right: 38px;
+      .search {
+        width: 70%;
+        flex-wrap: nowrap;
+
+
+        .magnify {
+          margin-left: -50px;
+          color: #0BA2D6;
+        }
+
+        input {
+          width: 90%;
+          margin-right: 1px;
+          border: none;
+          padding: 15px;
+
+        }
       }
-      input{
-        width:60%;
-        margin-right:1px;
-        border:none;
-        padding:15px;
 
-      }
+      .buy {
 
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
-      a {
-        font-size: 18px;
-        color: #333;
-        text-decoration: none;
-        border: 3px solid #0BA2D6;
-        border-radius: 50%;
-        padding: 1px;
-        transition: 0.3s;
+        a {
+          font-size: 18px;
+          color: #333;
+          text-decoration: none;
+          border: 3px solid #0BA2D6;
+          border-radius: 50%;
+          padding: 1px;
+          transition: 0.3s;
 
-      }
-      i{
-        padding: 3px;
-        width: 25px;
-        height: 25px;
-        align-content: center;
-        text-align: center;
-        color: #fff;
+        }
 
-      }
-      i.korpa{
+        i {
+          padding: 3px;
+          width: 25px;
+          height: 25px;
+          align-content: center;
+          text-align: center;
+          color: #fff;
+
+        }
+
+        i.korpa {
 
           padding: 3px;
           width: 25px;
@@ -110,23 +123,23 @@ header{
           color: #fff;
 
 
+        }
 
-      }
-      a.korpa{
-        margin-left: 20px;
-        margin-right: 5px;
-        color: #0BA2D6;
-        border: 0;
-        font-size: 14px;
-      }
+        a.korpa {
+          margin-left: 20px;
+          margin-right: 5px;
+          color: #0BA2D6;
+          border: 0;
+          font-size: 14px;
+        }
 
-      p{
-        margin: 0 3px 0 0;
-        padding: 0;
-        color: #fff;
-        font-weight: bold;
+        p {
+          margin: 0 3px 0 0;
+          padding: 0;
+          color: #fff;
+          font-weight: bold;
+        }
       }
-
 
     }
     }

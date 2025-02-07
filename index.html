@@ -13,6 +13,7 @@
 
 </head>
 <body>
+<div class="headerrr">
 <div class="gray-navbar">
     <div class="left-side"><p>Engleski</p>
         <p> Crnogorski </p>
@@ -30,35 +31,50 @@
 
 
         </div>
-        <div class="header-right"><input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
-            <i class="fa-solid fa-magnifying-glass magnify"></i>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="korpa">MOJA KORPA</a>
-            <p>0.00$</p>
-
-            <a href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping korpa"></i></a></div>
+        <div class="header-right">
+            <div class="search">
+                <input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
+                <i class="fa-solid fa-magnifying-glass magnify"></i>
+            </div>
+            <div class="buy">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="korpa">MOJA KORPA</a>
+                <p>0.00$</p>
+                <a href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping korpa"></i></a>
+                <div class="burger-menu" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
 
     </div>
 </header>
 
-<div class="small-nav">
-    <div class="trapezoid-left"></div>
-    <div class="select-menu" id="select-menu">
-        <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
-        <a href="#" onclick="navbar(this)">Akcija</a>
-        <a href="#" onclick="navbar(this)">Rasprodaja</a>
-        <a href="#" onclick="navbar(this)">Katalozi</a>
-        <a href="#" onclick="navbar(this)">Novosti</a>
-        <a href="#" onclick="navbar(this)">O nama</a>
-        <a href="#" onclick="navbar(this)">Uradi sam</a>
-        <a href="#" onclick="navbar(this)">Vip kartica</a>
-        <a href="#" onclick="navbar(this)">Kontakt</a>
-        <a href="#">
-            <p>Informacije</p> <br>
-            <p>tel: 020 123 456</p>
-        </a>
+    <div class="small-nav">
+        <div class="trapezoid-left"></div>
+
+        <!-- Burger meni dugme -->
+
+
+        <!-- Navigacija -->
+        <div class="select-menu" id="select-menu">
+            <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
+            <a href="#" onclick="navbar(this)">Akcija</a>
+            <a href="#" onclick="navbar(this)">Rasprodaja</a>
+            <a href="#" onclick="navbar(this)">Katalozi</a>
+            <a href="#" onclick="navbar(this)">Novosti</a>
+            <a href="#" onclick="navbar(this)">O nama</a>
+            <a href="#" onclick="navbar(this)">Uradi sam</a>
+            <a href="#" onclick="navbar(this)">Vip kartica</a>
+            <a href="#" onclick="navbar(this)">Kontakt</a>
+            <a href="#">
+                <p>Informacije</p>
+                <p>tel: 020 123 456</p>
+            </a>
+        </div>
+
+        <div class="trapezoid-right"></div>
     </div>
-    <div class="trapezoid-right"></div>
 
 </div>
 <div class="main-container">
@@ -486,7 +502,6 @@
 
 
 </div>
-<div class="line"></div>
 <div class="slider-two">
     <ul id="slider2">
         <li><img src="src/assets/gorenje.png" alt="Logo 1"></li>
@@ -549,6 +564,11 @@
 <script src="src/scripts/index-page.js"></script>
 
 <script>
+    function toggleMenu() {
+        var menu = document.getElementById("select-menu");
+        menu.classList.toggle("active");
+    }
+
 
     $(document).ready(function() {
         console.log("Document is ready!");

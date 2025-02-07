@@ -1,0 +1,304 @@
+
+
+.page-navigation{
+  width: 74%;
+  padding: 10px 13%;
+
+  span{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #666666;
+    margin-right: 5px;
+    &:last-of-type{
+      color:#0BA2D6;
+    }
+  }
+}
+
+.main-container-product{
+  width: 74%;
+  display: flex;
+  justify-content: center;
+  margin: 0 13% 0 13%;
+
+  .left-side{
+    width: 75%;
+    height: 100%;
+    border:1px solid black ;
+
+
+    .product-information{
+      display: flex;
+    }
+
+  }
+  .right-side{
+    width: 25%;
+    border:1px solid black ;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+  }
+}
+
+.bx-wrapper .bx-pager {
+  bottom: -95px;
+}
+
+.bx-wrapper .bx-pager a {
+  border: solid #ccc 1px;
+  display: block;
+  margin: 0 5px;
+  padding: 3px;
+}
+
+.bx-wrapper .bx-pager a:hover,
+.bx-wrapper .bx-pager a.active {
+  border: solid #5280DD 1px;
+}
+
+.bx-wrapper {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.product-description{
+
+  padding-left: 5%;
+
+  .title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  h1{
+    white-space: wrap;
+    word-break: break-word;
+    margin-top: 0;
+  }
+  }
+
+  .sub-title{
+    display: flex;
+    span{
+      font-size: 30px;
+      color:#0BA2D6;
+      padding-left: 20px;
+
+    }
+
+
+    .sub-div{
+      padding: 0 20px 0 0;
+      border-right: 1px solid #666666;
+      p{
+        margin: 0;
+        padding-left: 23px;
+      }
+    }
+    .price{
+      font-size:50px;
+      font-weight:bold;
+      padding-left: 0;
+
+
+    }
+
+  }
+}
+
+
+.product-info{
+  p{
+    margin: 10px 0;
+    color: rgba(0,0,0,0.4);
+    &:first-of-type{
+      color: black;
+      margin: 20px 0;
+    }
+  }
+}
+.social{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  input{
+    margin: 0 10px;
+    width: 120px;
+  }
+  span{
+    margin-left: 30px;
+    margin-right: 15px;
+    background-color: red;
+    color: white;
+    padding: 4px 10px 4px 10px;
+    font-size: 20px;
+
+  }
+
+  p{
+    margin-right: 15px;
+  }
+
+  a{
+    margin:5px;
+    text-decoration: none;
+    i{
+      height: 15px;
+      width: 15px;
+      padding: 10px;
+      text-align: center;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+    .fa-facebook-f{
+      color: white;
+      background-color: #3b5998;
+    }
+    .fa-twitter{
+      color: white;
+      background-color: #55acee;
+    }
+    .fa-envelope{
+      color: white;
+      background-color: #666666;
+    }
+    .fa-google-plus-g{
+      color: white;
+      background-color: #dd4b39;
+    }
+  }
+
+  .quantity-input {
+    width: 70px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    margin-right: 0px;
+    background-color: #f9f9f9;
+  }
+  .quantity-button {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+
+}
+
+.buttons{
+  button{
+    padding: 10px 20px;
+    background-color: #CCCCCC;
+    border-radius: 40px;
+    color: white;
+    border: none;
+    i{
+      margin-right: 10px;
+    }
+    &:first-of-type{
+      background-color: #0BA2D6;
+    }
+  }
+}
+
+
+.product-table {
+  margin-top: 30px;
+  padding:0 10px;
+
+  .checked{
+    color: #0BA2D6;
+  }
+
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+  }
+
+  .tab-button {
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    background: #333;
+    color: white;
+    border: none;
+    transition: background 0.3s;
+
+
+  }
+
+  .tab-button.active {
+    background: #3498db;
+  }
+
+  .tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  .product-infos {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-infos div {
+
+    width: 50%;
+    padding: 5px 10px 0 0;
+    box-sizing: border-box;
+    white-space: wrap;
+    color: rgba(0,0,0,0.6);
+
+  }
+
+
+
+}
+
+.similar-products {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  font-size: 20px;
+
+  span{
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .lines{
+    height: 1px;
+    width: 100%;
+    background-color: #ddd;
+  }
+}
+
+
+
+
+
+
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+
+}

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+
+    .slider-container{
+        width: 40%;
+
+    }
+    .bx-wrapper {
+        border: 1px solid black;
+        padding: 10px;
+        box-shadow: none !important;
+        background: none !important;
+    }
+    .bxslider img {
+        width: 100%;
+        height: auto;
+    }
+    #bx-pager {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 5px;
+    }
+    #bx-pager a {
+        display: inline-block;
+        width: 15%;
+        height: auto;
+        border: 2px solid transparent;
+    }
+    #bx-pager a img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    #bx-pager a.active {
+        border: 2px solid red;
+    }
+    .bx-prev{
+        left: 0;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+        $('.bxslider').bxSlider({
+            pagerCustom: '#bx-pager',
+            controls: true, // Isključuje strelice na glavnom slideru
+            auto: false, // Automatska promena slika
+            pause: 3000,
+            adaptiveHeight: true
+        });
+
+        $('#bx-pager a').on('click', function(){
+            $('#bx-pager a').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
+
+<body>
+
+<div class="headerrr">
+
+    <div class="gray-navbar">
+        <div class="left-side"><p>Engleski</p>
+            <p> Crnogorski </p>
+            <p> Svakog dana od 08:00 do 21:00 h, osim nedeljom Tel: +382 20 656 772</p></div>
+        <div class="right-side"><p>On-line Podrska </p>
+            <p> Registracija</p>
+            <p> Prijava</p></div>
+    </div>
+
+<header class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <span class="stretch">CENTRO</span><span class="stretch">METAL</span>
+            </div>
+
+
+        </div>
+        <div class="header-right">
+            <div class="search">
+            <input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
+            <i class="fa-solid fa-magnifying-glass magnify"></i>
+            </div>
+            <div class="buy">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="korpa">MOJA KORPA</a>
+            <p>0.00$</p>
+            <a href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping korpa"></i></a></div>
+        </div>
+    </div>
+</header>
+
+<div class="small-nav">
+    <div class="trapezoid-left"></div>
+    <div class="burger-menu" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="select-menu" id="select-menu">
+        <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
+        <a href="#" onclick="navbar(this)">Akcija</a>
+        <a href="#" onclick="navbar(this)">Rasprodaja</a>
+        <a href="#" onclick="navbar(this)">Katalozi</a>
+        <a href="#" onclick="navbar(this)">Novosti</a>
+        <a href="#" onclick="navbar(this)">O nama</a>
+        <a href="#" onclick="navbar(this)">Uradi sam</a>
+        <a href="#" onclick="navbar(this)">Vip kartica</a>
+        <a href="#" onclick="navbar(this)">Kontakt</a>
+        <a href="#">
+            <p>Informacije</p> <br>
+            <p>tel: 020 123 456</p>
+        </a>
+    </div>
+    <div class="trapezoid-right"></div>
+
+</div>
+</div>
+<div class="page-navigation">
+<span>Naslovna /</span><span>Proizvodi /</span><span>grupa robe</span>
+</div>
+<div class="main-container-product">
+    <div class="left-side">
+        <div class="product-information">
+        <div class="slider-container">
+            <ul class="bxslider">
+                <li><img src="https://picsum.photos/id/101/400/400"></li>
+                <li><img src="https://picsum.photos/id/102/400/400"></li>
+                <li><img src="https://picsum.photos/id/103/400/400"></li>
+                <li><img src="https://picsum.photos/id/104/400/400"></li>
+            </ul>
+
+            <div id="bx-pager">
+                <a data-slide-index="0" href=""><img src="https://picsum.photos/id/101/80/80"></a>
+                <a data-slide-index="1" href=""><img src="https://picsum.photos/id/102/80/80"></a>
+                <a data-slide-index="2" href=""><img src="https://picsum.photos/id/103/80/80"></a>
+                <a data-slide-index="3" href=""><img src="https://picsum.photos/id/104/80/80"></a>
+            </div>
+        </div>
+        <div class="product-description">
+            <div class="title">
+            <h1>Gorenje WD 95140 Mašina za pranje u sušenje</h1>
+            <div class="sub-title"> <div class="sub-div">   <span class="price">554$</span></div> <div class="sub-div"> <span>123 456 789</span> <p>Šifra artikla</p> </div> </div>
+            </div>
+
+            <div class="product-info">
+                <p>Šifra artikla: 7248</p>
+                <p>Broj okretanja centrifuge: 1400,00 okr/min</p>
+                <p>Elektronsko upravljanje: DA</p>
+                <p>Samostojeći: DA</p>
+                <p>Punjenje sprijeda: DA</p>
+                <p>Kapacitet pranja: 9kg</p>
+                <p>Kapacitet sušenja: 7kg</p>
+                <p>Kapacitet nečega: 7kg</p>
+            </div>
+            <div class="social">
+                <p>Količina: </p>
+                <input type="text" class="quantity-input" id="quantity" value="10" readonly>
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+                <span>+</span>
+                <p>Share:</p>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""> <i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-regular fa-envelope"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+
+            <div class="buttons">
+                <button><i class="fa-solid fa-cart-shopping korpa"></i>Dodaj u korpu</button>
+                <button>Provjeri korpu</button>
+            </div>
+        </div>
+
+    </div>
+
+        <div class="product-table">
+
+            <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'proizvod')">PROIZVODNA LISTA</button>
+                <button class="tab-button" onclick="openTab(event, 'uputstvo')">UPUTSTVO ZA RUKOVANJE</button>
+                <button class="tab-button" onclick="openTab(event, 'ocjena')">OCJENA</button>
+                <button class="tab-button" onclick="openTab(event, 'email')">E-MAIL</button>
+            </div>
+
+            <div id="proizvod" class="tab-content active">
+                <div class="product-infos">
+                    <div>Samostojeći: DA</div>
+                    <div>Odgoda početka rada: DA</div>
+                    <div>Punjenje sprijeda: DA</div>
+                    <div>Ručni program: DA</div>
+                    <div>Elektronsko upravljanje: DA</div>
+                    <div>Brzi program: DA</div>
+                    <div>Kapacitet pranja: 9 kg</div>
+                    <div>Energetski razred: A</div>
+                    <div>Kapacitet sušenja: 7 kg</div>
+                    <div>Učinkovitost pranja: A</div>
+                    <div>Broj okretaja centrifuge: 1400 okr/min</div>
+                    <div>Učinkovitost centrifugiranja: A</div>
+                    <div>Podešavanje centrifuge: DA</div>
+                    <div>Potrošnja vode za sušenje i pranje: 148 L</div>
+                    <div>Isključivanje centrifugiranja: DA</div>
+                    <div>Razine buke: 41 dB</div>
+                    <div>Fuzzy logic: DA</div>
+                    <div>Razine buke centrifuge: 64 dB</div>
+                    <div>Automatsko prilagođavanje potrošnje vode: DA</div>
+                    <div>Visina: 85 cm</div>
+                    <div>Senzorsko sušenje: DA</div>
+                    <div>Širina: 60 cm</div>
+                </div>
+            </div>
+
+            <div id="uputstvo" class="tab-content">
+                <p>Ovdje ide uputstvo za rukovanje...</p>
+            </div>
+
+            <div id="ocjena" class="tab-content">
+                <p>Ocijenite ovaj proizvod</p>
+                <span class="fa fa-star" onclick="rateStar(1)"></span>
+                <span class="fa fa-star" onclick="rateStar(2)"></span>
+                <span class="fa fa-star" onclick="rateStar(3)"></span>
+                <span class="fa fa-star" onclick="rateStar(4)"></span>
+                <span class="fa fa-star" onclick="rateStar(5)"></span>
+            </div>
+
+            <div id="email" class="tab-content">
+                <p>Ovdje ide email kontakt forma...</p>
+            </div>
+
+
+            <div class="similar-products">
+                <span>Slicni proizvodi</span>
+                <div class="lines"></div>
+            </div>
+            <div class="popusti">
+            <div class="product-bar">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="src/assets/zasudje.png" alt="">
+                        <div class="badge">20%</div>
+                    </div>
+                    <h5>Ugradni frižider</h5>
+                    <span class="timer">10 dan 6 sat 15 min 10 sec</span>
+                    <div class="price">
+                        <span class="old-price">$150.00</span>
+                        <span class="new-price">$90.00</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="src/assets/sega.png" alt="">
+                        <div class="badge">30%</div>
+                    </div>
+                    <h5>Ugradni frizider</h5>
+                    <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                    <div class="price"><span class="old-price">$150.00</span><span class="new-price">$90.00</span></div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="src/assets/frizider.png" alt="">
+                        <div class="badge">40%</div>
+                    </div>
+                    <h5>Ugradni frizider</h5>
+                    <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                    <div class="price"><span class="old-price">$150.00</span><span class="new-price">$90.00</span></div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="src/assets/sporet.png" alt="">
+                        <div class="badge">90%</div>
+                    </div>
+                    <h5>Ugradni frizider</h5>
+                    <span class="timer">10dan 6 sat 15 min 10 sec</span>
+                    <div class="price"><span class="old-price">$150.00</span><span class="new-price">$90.00</span></div>
+                </div>
+            </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="right-side" >
+        <video width="100%" height="auto" controls>
+            <source src="src/assets/6982055-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        <video width="100%" height="auto" controls>
+            <source src="src/assets/6982055-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+
+
+        <div class="newsletter newsletter-product">
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                Prijavi se na newsletter
+            </p>
+            <input type="text" placeholder="Ime i prezime">
+            <input type="text" placeholder="Email">
+            <button class="button__blue">Prijavi se</button>
+        </div>
+    </div>
+
+
+</div>
+
+    <div class="slider-two">
+        <ul id="slider2">
+            <li><img src="src/assets/gorenje.png" alt="Logo 1"></li>
+            <li><img src="src/assets/samsung.png" alt="Logo 2"></li>
+            <li><img src="src/assets/sony.png" alt="Logo 3"></li>
+            <li><img src="src/assets/pan.png" alt="Logo 3" style="margin-top: 20px"></li>
+            <li><img src="src/assets/panasonic.png" alt="Logo 3" style="margin-top: -30px"></li>
+
+        </ul>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-content">
+                <h5>Informacije</h5>
+                <p>O nama</p>
+                <p>Gdje kupiti</p>
+                <p>Zaposljenje</p>
+                <p>Aktivnosti</p>
+            </div>
+
+            <div class="footer-content">
+                <h5>Aktivnosti</h5>
+                <p>Akcije</p>
+                <p>Noviteti</p>
+                <p>Rasprodaja</p>
+                <p>Marketing</p>
+            </div>
+
+            <div class="footer-content">
+                <h5>Moja strana</h5>
+                <p>Registracija</p>
+                <p>Prijava</p>
+                <p>Korisnička strana</p>
+                <p>Korpa</p>
+            </div>
+
+            <div class="footer-content">
+                <h5>Plaćanje i dostava</h5>
+                <p>Načini plaćanja</p>
+                <p>Sigurnost plaćanja</p>
+                <p>Brza i pouzdana dostava</p>
+                <p>Odaberite datum dostave</p>
+            </div>
+
+            <div class="footer-content">
+                <h5>Povrat i zamjena</h5>
+                <p>Servis</p>
+                <p>Reklamacije</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2016 Copyright by <a href="">centrometal.me</a> All rights reserved</p>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+<script>
+    function increaseQuantity() {
+        let input = document.getElementById("quantity");
+        let value = parseInt(input.value, 10);
+        value = isNaN(value) ? 1 : value + 1;
+        input.value = value.toString().padStart(2, '0');
+    }
+
+    function decreaseQuantity() {
+        let input = document.getElementById("quantity");
+        let value = parseInt(input.value, 10);
+        if (value > 1) {
+            value--;
+        }
+        input.value = value.toString().padStart(2, '0');
+    }
+
+
+    function openTab(event, tabName) {
+        var i, tabContent, tabButtons;
+
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+
+        tabButtons = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.classList.add("active");
+    }
+
+
+    function rateStar(rating) {
+        let stars = document.querySelectorAll(".fa-star");
+        for (let i = 0; i < stars.length; i++) {
+            if (i < rating) {
+                stars[i].classList.add("checked");
+            } else {
+                stars[i].classList.remove("checked");
+            }
+        }
+        document.getElementById("rating-value").textContent = rating;
+    }
+
+
+    $(document).ready(function () {
+        var $slider = $("#slider2").bxSlider({
+            pager: false,        // Disable bxSlider's pager
+            controls: true,      // Show prev/next controls
+            infiniteLoop: true,  // Enable infinite loop
+            touchEnabled: true,  // Enable touch swiping
+            auto: true,          // Enable auto-sliding
+            pause: 3000,         // Slide duration in milliseconds
+            minSlides: 1,        // Minimum number of logos visible
+            maxSlides: 1,        // Maximum number of logos visible
+            slideWidth: 230,     // Control logo size without stretching
+            moveSlides: 1,       // Move one slide at a time
+            autoHover: true,     // Pause on hover
+            shrinkItems: false,  // Prevent bxSlider from resizing images
+            responsive: true
+        });
+    });
+
+
+
+
+</script>
+
+</html>
