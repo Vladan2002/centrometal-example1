@@ -23,6 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.05);
@@ -76,7 +77,6 @@
     flex-direction: row;
     gap: 40px;
     flex-wrap: wrap;
-    margin: 0 20px;
   }
 
   .badge {
@@ -123,6 +123,7 @@
     border: 3px solid #01AEEE;
     text-transform: uppercase;
     color: #015575;
+    cursor: pointer;
     &:hover{
       transform: scale(1.05);
     }
@@ -139,13 +140,10 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    width: calc(100% - 0px);
+    width:100%;
     margin: 20px 0px 20px 40px;
-    cursor: pointer;
 
-  &:hover{
-    transform: scale(1.05);
-  }
+
   }
   .trapez{
     position: relative;
@@ -160,9 +158,9 @@
       font-size: 18px;
       padding: 0;
       margin: 0;
-      position: absolute; /* Omogućava precizno centriranje */
-      top: 50%; /* Pomera na 50% visine trapeza */
-      left: 50%; /* Pomera na 50% širine trapeza */
+      position: absolute;
+      top: 50%;
+      left: 50%; 
       transform: translate(-50%, 50%) rotate(180deg);
       color: #ffffff;
       text-transform: uppercase;

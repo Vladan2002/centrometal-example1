@@ -21,7 +21,7 @@
       }
       button{
         display: flex;
-
+        cursor: pointer;
         padding: 15px 4%;
         border: none;
         background-color: #F4F4F4;
@@ -42,21 +42,27 @@
           transition: 0.5s;
           border: 1px solid #E1E1E1;
         }
-      }
 
-      >button:first-child{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        background-color: #005474;
-        color: white;
-        img{
-          margin:0 7px;
-          height: 18px;
-          width: 18px;
+        &:first-child{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          background-color: #005474;
+          color: white;
+          p{
+            text-transform: none;
+          }
+          img{
+            margin:0 7px;
+            height: 18px;
+            width: 18px;
+          }
+
         }
       }
+
+
 
     }
   }
@@ -67,7 +73,7 @@
   display: none !important;
 }
 
-.search-brand{
+.search-brand, .search-brand2{
   width: 80%;
   padding: 15px 10%;
   font-weight: bold;
@@ -75,7 +81,6 @@
   text-transform: uppercase;
   color: white;
   background-color: #005474;
-  height: 60px;
   input{
     width: 100%;
     border: none;
@@ -119,13 +124,13 @@
 
 }
 
-.newsletter{
+.newsletter, .newsletter2{
   width: 80%;
   padding: 15px 10%;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
-  color: white;
+  color: white !important;
   background-color: #005474;
 
 white-space: wrap;
@@ -137,25 +142,37 @@ white-space: wrap;
     background-color: transparent;
     border-bottom: 2px solid #00A9EA;
     padding: 10px 0 ;
+    color: white !important;
     &::placeholder{
       color: white;
     }
   }
 }
-.makita-post{
+.makita-post, .makita-post2{
   display: flex;
   width: 100%;
   flex-direction: column;
   img{
-    margin:0 10%;
-    width: 80%;
+    width: 200px;
+    max-width: 200px;
+    min-width: 100px;
     height: 200px;
   }
   h5{
     font-size: 20px;
     margin: 0;
   }
+  div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+  }
 
+}
+.makita-post2{
+  margin-top: 40px;
 }
 
 .button__blue{
@@ -170,6 +187,10 @@ white-space: wrap;
   padding: 0 10px;
   min-width: 70px;
   word-wrap: break-word;
+  cursor: pointer;
+  &:hover{
+    transform:scale(1.05);
+  }
 }
 
 .button__subcategory{
@@ -178,4 +199,8 @@ background-color: darken(#F4F4F4, 3%)!important;
   font-weight: normal !important;
   font-size: 14px !important;
   margin:0 3px  !important;
+}
+
+.search-brand2,.newsletter2,.makita-post2{
+  display: none;
 }

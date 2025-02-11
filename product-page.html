@@ -12,67 +12,11 @@
 
     <link rel="stylesheet" href="main.css">
 </head>
-<style>
 
-    .slider-container{
-        width: 40%;
-
-    }
-    .bx-wrapper {
-        border: 1px solid black;
-        padding: 10px;
-        box-shadow: none !important;
-        background: none !important;
-    }
-    .bxslider img {
-        width: 100%;
-        height: auto;
-    }
-    #bx-pager {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-        gap: 5px;
-    }
-    #bx-pager a {
-        display: inline-block;
-        width: 15%;
-        height: auto;
-        border: 2px solid transparent;
-    }
-    #bx-pager a img {
-        width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-    #bx-pager a.active {
-        border: 2px solid red;
-    }
-    .bx-prev{
-        left: 0;
-    }
-</style>
-<script>
-    $(document).ready(function(){
-        $('.bxslider').bxSlider({
-            pagerCustom: '#bx-pager',
-            controls: true, // Isključuje strelice na glavnom slideru
-            auto: false, // Automatska promena slika
-            pause: 3000,
-            adaptiveHeight: true
-        });
-
-        $('#bx-pager a').on('click', function(){
-            $('#bx-pager a').removeClass('active');
-            $(this).addClass('active');
-        });
-    });
-</script>
 
 <body>
 
 <div class="headerrr">
-
     <div class="gray-navbar">
         <div class="left-side"><p>Engleski</p>
             <p> Crnogorski </p>
@@ -81,54 +25,57 @@
             <p> Registracija</p>
             <p> Prijava</p></div>
     </div>
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="stretch">CENTRO</span><span class="stretch">METAL</span>
+                </div>
 
-<header class="header">
-    <div class="container">
-        <div class="header-left">
-            <div class="logo">
-                <span class="stretch">CENTRO</span><span class="stretch">METAL</span>
+
+            </div>
+            <div class="header-right">
+                <div class="search">
+                    <input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
+                    <i class="fa-solid fa-magnifying-glass magnify"></i>
+                </div>
+                <div class="buy">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="korpa">MOJA KORPA</a>
+                    <p>0.00$</p>
+                    <a href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping korpa"></i></a>
+                    <div class="burger-menu" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
             </div>
 
-
         </div>
-        <div class="header-right">
-            <div class="search">
-            <input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
-            <i class="fa-solid fa-magnifying-glass magnify"></i>
-            </div>
-            <div class="buy">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="korpa">MOJA KORPA</a>
-            <p>0.00$</p>
-            <a href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping korpa"></i></a></div>
+    </header>
+
+    <div class="small-nav">
+        <div class="trapezoid-left"></div>
+
+
+        <div class="select-menu" id="select-menu">
+            <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
+            <a href="#" onclick="navbar(this)">Akcija</a>
+            <a href="#" onclick="navbar(this)">Rasprodaja</a>
+            <a href="#" onclick="navbar(this)">Katalozi</a>
+            <a href="#" onclick="navbar(this)">Novosti</a>
+            <a href="#" onclick="navbar(this)">O nama</a>
+            <a href="#" onclick="navbar(this)">Uradi sam</a>
+            <a href="#" onclick="navbar(this)">Vip kartica</a>
+            <a href="#" onclick="navbar(this)">Kontakt</a>
+            <a href="#">
+                <p>Informacije</p>
+                <p>tel: 020 123 456</p>
+            </a>
         </div>
-    </div>
-</header>
 
-<div class="small-nav">
-    <div class="trapezoid-left"></div>
-    <div class="burger-menu" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars"></i>
+        <div class="trapezoid-right"></div>
     </div>
 
-    <div class="select-menu" id="select-menu">
-        <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
-        <a href="#" onclick="navbar(this)">Akcija</a>
-        <a href="#" onclick="navbar(this)">Rasprodaja</a>
-        <a href="#" onclick="navbar(this)">Katalozi</a>
-        <a href="#" onclick="navbar(this)">Novosti</a>
-        <a href="#" onclick="navbar(this)">O nama</a>
-        <a href="#" onclick="navbar(this)">Uradi sam</a>
-        <a href="#" onclick="navbar(this)">Vip kartica</a>
-        <a href="#" onclick="navbar(this)">Kontakt</a>
-        <a href="#">
-            <p>Informacije</p> <br>
-            <p>tel: 020 123 456</p>
-        </a>
-    </div>
-    <div class="trapezoid-right"></div>
-
-</div>
 </div>
 <div class="page-navigation">
 <span>Naslovna /</span><span>Proizvodi /</span><span>grupa robe</span>
@@ -138,17 +85,23 @@
         <div class="product-information">
         <div class="slider-container">
             <ul class="bxslider">
-                <li><img src="https://picsum.photos/id/101/400/400"></li>
-                <li><img src="https://picsum.photos/id/102/400/400"></li>
-                <li><img src="https://picsum.photos/id/103/400/400"></li>
-                <li><img src="https://picsum.photos/id/104/400/400"></li>
+                <li><img src="src/assets/masina2.jpg"></li>
+                <li><img src="src/assets/masina1.jpg"></li>
+                <li><img src="src/assets/masina3.jpg"></li>
+                <li><img src="src/assets/masina4.jpg"></li>
             </ul>
 
-            <div id="bx-pager">
-                <a data-slide-index="0" href=""><img src="https://picsum.photos/id/101/80/80"></a>
-                <a data-slide-index="1" href=""><img src="https://picsum.photos/id/102/80/80"></a>
-                <a data-slide-index="2" href=""><img src="https://picsum.photos/id/103/80/80"></a>
-                <a data-slide-index="3" href=""><img src="https://picsum.photos/id/104/80/80"></a>
+            <div class="pager-wrap">
+                <button id="prev-slide">❮</button>
+
+                <div id="bx-pager">
+                <a data-slide-index="0" href=""><img src="src/assets/masina2.jpg"></a>
+                <a data-slide-index="1" href=""><img src="src/assets/masina1.jpg"></a>
+                <a data-slide-index="2" href=""><img src="src/assets/masina3.jpg"></a>
+                <a data-slide-index="3" href=""><img src="src/assets/masina4.jpg"></a>
+                </div>
+                <button id="next-slide">❯</button>
+
             </div>
         </div>
         <div class="product-description">
@@ -199,33 +152,41 @@
 
             <div id="proizvod" class="tab-content active">
                 <div class="product-infos">
+
+                    <div class="left-side-infos">
                     <div>Samostojeći: DA</div>
-                    <div>Odgoda početka rada: DA</div>
                     <div>Punjenje sprijeda: DA</div>
-                    <div>Ručni program: DA</div>
                     <div>Elektronsko upravljanje: DA</div>
-                    <div>Brzi program: DA</div>
                     <div>Kapacitet pranja: 9 kg</div>
-                    <div>Energetski razred: A</div>
                     <div>Kapacitet sušenja: 7 kg</div>
-                    <div>Učinkovitost pranja: A</div>
                     <div>Broj okretaja centrifuge: 1400 okr/min</div>
-                    <div>Učinkovitost centrifugiranja: A</div>
                     <div>Podešavanje centrifuge: DA</div>
-                    <div>Potrošnja vode za sušenje i pranje: 148 L</div>
                     <div>Isključivanje centrifugiranja: DA</div>
-                    <div>Razine buke: 41 dB</div>
                     <div>Fuzzy logic: DA</div>
-                    <div>Razine buke centrifuge: 64 dB</div>
                     <div>Automatsko prilagođavanje potrošnje vode: DA</div>
-                    <div>Visina: 85 cm</div>
                     <div>Senzorsko sušenje: DA</div>
+
+                    </div>
+                    <div class="right-side-infos">
+                    <div>Odgoda početka rada: DA</div>
+                    <div>Ručni program: DA</div>
+                    <div>Brzi program: DA</div>
+                    <div>Energetski razred: A</div>
+                    <div>Učinkovitost pranja: A</div>
+                    <div>Učinkovitost centrifugiranja: A</div>
+                    <div>Potrošnja vode za sušenje i pranje: 148 L</div>
+                    <div>Razine buke: 41 dB</div>
+                    <div>Razine buke centrifuge: 64 dB</div>
+                    <div>Visina: 85 cm</div>
                     <div>Širina: 60 cm</div>
+                    </div>
+
+
                 </div>
             </div>
 
             <div id="uputstvo" class="tab-content">
-                <p>Ovdje ide uputstvo za rukovanje...</p>
+                <button><a href="src/assets/upustvo.pdf">Upustvo</a></button>
             </div>
 
             <div id="ocjena" class="tab-content">
@@ -238,7 +199,17 @@
             </div>
 
             <div id="email" class="tab-content">
-                <p>Ovdje ide email kontakt forma...</p>
+                <div class="container">
+
+                    <input type="text" placeholder="E-mail adresa" >
+                    <input type="text" placeholder="Naslov" >
+                    <textarea placeholder="Unesi tekst"></textarea>
+                </div>
+
+
+
+
+
             </div>
 
 
@@ -383,76 +354,7 @@
 
 </body>
 
-<script>
-    function increaseQuantity() {
-        let input = document.getElementById("quantity");
-        let value = parseInt(input.value, 10);
-        value = isNaN(value) ? 1 : value + 1;
-        input.value = value.toString().padStart(2, '0');
-    }
+<script src="src/scripts/index-page.js"></script>
 
-    function decreaseQuantity() {
-        let input = document.getElementById("quantity");
-        let value = parseInt(input.value, 10);
-        if (value > 1) {
-            value--;
-        }
-        input.value = value.toString().padStart(2, '0');
-    }
-
-
-    function openTab(event, tabName) {
-        var i, tabContent, tabButtons;
-
-        tabContent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabContent.length; i++) {
-            tabContent[i].style.display = "none";
-        }
-
-        tabButtons = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tabButtons.length; i++) {
-            tabButtons[i].classList.remove("active");
-        }
-
-        document.getElementById(tabName).style.display = "block";
-        event.currentTarget.classList.add("active");
-    }
-
-
-    function rateStar(rating) {
-        let stars = document.querySelectorAll(".fa-star");
-        for (let i = 0; i < stars.length; i++) {
-            if (i < rating) {
-                stars[i].classList.add("checked");
-            } else {
-                stars[i].classList.remove("checked");
-            }
-        }
-        document.getElementById("rating-value").textContent = rating;
-    }
-
-
-    $(document).ready(function () {
-        var $slider = $("#slider2").bxSlider({
-            pager: false,        // Disable bxSlider's pager
-            controls: true,      // Show prev/next controls
-            infiniteLoop: true,  // Enable infinite loop
-            touchEnabled: true,  // Enable touch swiping
-            auto: true,          // Enable auto-sliding
-            pause: 3000,         // Slide duration in milliseconds
-            minSlides: 1,        // Minimum number of logos visible
-            maxSlides: 1,        // Maximum number of logos visible
-            slideWidth: 230,     // Control logo size without stretching
-            moveSlides: 1,       // Move one slide at a time
-            autoHover: true,     // Pause on hover
-            shrinkItems: false,  // Prevent bxSlider from resizing images
-            responsive: true
-        });
-    });
-
-
-
-
-</script>
 
 </html>

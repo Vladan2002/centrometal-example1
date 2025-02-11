@@ -1,3 +1,17 @@
+
+.burger-menu {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+
+  i{
+    padding:0;
+  }
+
+}
+
+
 @media (max-width: 1230px) {
 
   .trapez-div{
@@ -5,13 +19,13 @@
 }
 
   .block {
-    left: 0 !important;
-    top: 0 !important;
-    bottom: 70% !important;
+    left: 10px !important;
+    top: 10px !important;
+    bottom: 55% !important;
     height: auto !important;
     width: auto !important;
     min-width: auto !important;
-    padding: 10px 0 !important;
+    padding: 20px 10px !important;
 
     span {
       font-size: 20px !important;
@@ -44,27 +58,43 @@
     .gray-navbar {
       display: none;
     }
+
     header {
-      padding: 15px 0 35px 0;
+      padding: 10px  0!important;
       .container {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100%;
         .header-left {
           justify-content: center;
-          margin-bottom: 5px;
+          margin-bottom: 20px;
         }
         .header-right {
+          width: 100%;
+          display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
           gap: 2px;
           .search {
+            width: 80% !important;
             flex-wrap: nowrap;
+            max-width: 300px;
+
+
+            input{
+              min-width: 200px;
+
+            }
           }
           .buy {
+            width: 80% !important;
             justify-content: center;
             align-items: center;
+            padding: 5px 0 !important;
+            gap: 10px !important;
           }
         }
         span {
@@ -93,6 +123,23 @@
     }
   }
 
+  .menu{
+    button{
+      &:first-child{
+        &:hover{
+          transform: none !important;
+          border:none !important;
+          img{
+            transform: scale(1.20) !important;
+          }
+          p{
+            margin-left: 10px !important;
+            transform: scale(1.05) !important;
+          }
+        }
+      }
+    }
+  }
   .product-card {
     min-width: 100px;
     img {
@@ -127,7 +174,7 @@
     display: none !important;
     flex-direction: column;
     position: absolute;
-    top: 135px;
+    top: 175px;
     left: 0;
     width: 100% !important;
     background-color: #00ADF0;
@@ -135,14 +182,12 @@
   }
   .select-menu a {
     display: block;
-    text-align: center;
+    text-align: center !important;
     padding: 15px 0 !important;
     border: none;
     border-bottom: 1px solid #009AD9;
     width: 100%;
-    &:first-child {
-      display: none;
-    }
+
   }
   .select-menu.active {
     display: flex !important;
@@ -188,7 +233,7 @@
     width: 8% !important;
   }
 
-  .product-infos div {
+  .left-side-infos{
     border-right: 1px solid #ccc;
   }
 
@@ -212,8 +257,10 @@
     }
     .right-side {
       width: 100% !important;
-      margin: 0 !important;
+      margin: 10px !important;
       padding: 0 !important;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -228,6 +275,67 @@
       width: 100%;
       padding: 0 !important;
       border: 0;
+    }
+  }
+
+  .makita-post,.search-brand, .newsletter {
+    display: none;
+  }
+  .makita-post2,.search-brand2, .newsletter2 {
+    display: block;
+    margin-top:10px;
+
+  }
+  .newsletter-product{
+    display: block !important;
+    button{
+      max-width: 200px;
+    }
+  }
+  .makita-post2{
+    padding: 50px ;
+    width: 80% !important;
+    padding: 0 10%;
+  }
+
+  .footer{
+    width: 90% !important;
+    padding: 0 5% !important;
+  }
+  .footer-content{
+    width: 80% !important;
+    padding-left:50px !important;
+    border: none !important;
+  }
+  .copyright{
+    width: 90% !important;
+    padding: 10px 5% !important;
+  }
+
+  .bx-prev,.bx-next{
+    display: none !important;
+  }
+
+  .slider-container{
+    width: 90% !important;
+    padding: 10px 5% !important;
+    .bx-wrapper {
+      min-width: 250px;
+    }
+    #bx-pager a {
+      min-width: 50px;
+    }
+  }
+
+  .product-description{
+    width: 90% !important;
+    padding: 0 5% !important;
+    h1{
+      font-size: 30px !important;
+    }
+
+    .price{
+      font-size: 40px !important;
     }
   }
 }

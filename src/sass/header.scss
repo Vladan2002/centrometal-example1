@@ -126,8 +126,8 @@ header{
         }
 
         a.korpa {
-          margin-left: 20px;
-          margin-right: 5px;
+          margin-left: 5px;
+          margin-right: 3px;
           color: #0BA2D6;
           border: 0;
           font-size: 14px;
@@ -173,10 +173,25 @@ header{
       white-space: nowrap;
       justify-content: center;
       color: #fff;
-      &:hover,
-      &.active{
+      flex-direction: column;
+      &:hover,&.active{
         border-top:2px solid white;
       }
+      &:last-child{
+        padding: 5px 13px 13px 13px;
+        text-align: start;
+        cursor: auto;
+        &:hover,&.active{
+          border-top:none;
+          transform:none;
+        }
+        p{
+          &:first-child{
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+
 
     }
     i{
