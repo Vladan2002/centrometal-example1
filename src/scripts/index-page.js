@@ -26,7 +26,7 @@ function navbar(element) {
 
 }
 function toggleSubcategories(category) {
-    const subcategories = document.querySelectorAll(`.button__subcategory[data-category="${category}"]`);
+    const subcategories = document.querySelectorAll(`.ads-div__menu__button__subcategory[data-category="${category}"]`);
 
     subcategories.forEach(sub => {
     sub.classList.toggle('deactivate-button');
@@ -160,7 +160,7 @@ $(document).ready(function() {
     console.log("BX Slider initialized:", $slider);
 
     var totalSlides = $(".slider .slide-img").length;
-    var customPager = $('.custom-pager');
+    var customPager = $('.products__slide-show__custom-pager');
 
     console.log("Total slides:", totalSlides);
 

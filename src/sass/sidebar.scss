@@ -2,14 +2,14 @@
   width: 74%;
   display: flex;
   justify-content: center;
-  margin: 0 13% 0 13%;
+  margin: 0 13% 0 13%;}
   .ads-div{
     width: 25%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 
-    .menu{
+    &__menu{
       width: 100%;
       margin-top:20px;
       display: flex;
@@ -62,145 +62,158 @@
         }
       }
 
+      &__button__subcategory{
+        background-color: darken(#F4F4F4, 3%)!important;
+        padding-left: 15% !important;
+        font-weight: normal !important;
+        font-size: 14px !important;
+        margin:0 3px  !important;
+      }
+
 
 
     }
+
+
+    &__ad{
+      width: 100%;
+      position: relative;
+      display: inline-block;
+
+      p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-99%, 30%);
+        color: white;
+        font-size: 50px;
+        white-space: nowrap;
+        font-weight: bold;
+        &:first-of-type{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 50px;
+          white-space: nowrap;
+          font-style: italic;
+        }
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+
+    }
+
+
+    &__button__blue{
+      width:50%;
+      height: 30px;
+      border: none;
+      background-color: #00A9EA;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 0 10px;
+      min-width: 70px;
+      word-wrap: break-word;
+      cursor: pointer;
+      &:hover{
+        transform:scale(1.05);
+      }
+    }
+
+
+    &__search-brand{
+      width: 80%;
+      padding: 15px 10%;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: white;
+      background-color: #005474;
+      input{
+        width: 100%;
+        border: none;
+        height: 30px;
+        margin-top: 10px;
+      }
+      i.magnify{
+        margin-left: -30px;
+        color: #0BA2D6;
+      }
+    }
+
+
+    &__newsletter{
+      width: 80%;
+      padding: 15px 10%;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: white !important;
+      background-color: #005474;
+      white-space: wrap;
+
+      input{
+        width: 100%;
+        border: none;
+        margin-bottom: 10px;
+        background-color: transparent;
+        border-bottom: 2px solid #00A9EA;
+        padding: 10px 0 ;
+        color: white !important;
+        &::placeholder{
+          color: white;
+        }
+      }
+    }
+    &__makita-post{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      img{
+        width: 200px;
+        max-width: 200px;
+        min-width: 100px;
+        height: 200px;
+      }
+      h5{
+        font-size: 20px;
+        margin: 0;
+      }
+      div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 auto;
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
   }
 
-}
+
 
 .deactivate-button{
   display: none !important;
 }
 
-.search-brand, .search-brand2{
-  width: 80%;
-  padding: 15px 10%;
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: white;
-  background-color: #005474;
-  input{
-    width: 100%;
-    border: none;
-    height: 30px;
-    margin-top: 10px;
-  }
-  i.magnify{
-    margin-left: -30px;
-    color: #0BA2D6;
-  }
-}
-.ad{
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  >p:first-of-type{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 50px;
-    white-space: nowrap;
-    font-style: italic;
 
-  }
-  p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-99%, 30%);
-    color: white;
-    font-size: 50px;
-    white-space: nowrap;
-    font-weight: bold;
-  }
-  img{
-    width: 100%;
-    height: auto;
-  }
 
-}
 
-.newsletter, .newsletter2{
-  width: 80%;
-  padding: 15px 10%;
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: white !important;
-  background-color: #005474;
 
-white-space: wrap;
-
-  input{
-    width: 100%;
-    border: none;
-    margin-bottom: 10px;
-    background-color: transparent;
-    border-bottom: 2px solid #00A9EA;
-    padding: 10px 0 ;
-    color: white !important;
-    &::placeholder{
-      color: white;
-    }
-  }
-}
-.makita-post, .makita-post2{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  img{
-    width: 200px;
-    max-width: 200px;
-    min-width: 100px;
-    height: 200px;
-  }
-  h5{
-    font-size: 20px;
-    margin: 0;
-  }
-  div{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:0 auto;
-  }
-
-}
-.makita-post2{
-  margin-top: 40px;
-}
-
-.button__blue{
-  width:50%;
-  height: 30px;
-  border: none;
-  background-color: #00A9EA;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 0 10px;
-  min-width: 70px;
-  word-wrap: break-word;
-  cursor: pointer;
-  &:hover{
-    transform:scale(1.05);
-  }
-}
-
-.button__subcategory{
-background-color: darken(#F4F4F4, 3%)!important;
-  padding-left: 15% !important;
-  font-weight: normal !important;
-  font-size: 14px !important;
-  margin:0 3px  !important;
-}
-
-.search-brand2,.newsletter2,.makita-post2{
-  display: none;
-}

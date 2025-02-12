@@ -1,4 +1,4 @@
-.slide-show{
+.products__slide-show{
 
 .bx-wrapper {
   position: relative;
@@ -178,18 +178,7 @@ ul.bxslider {
   font-size: .85em;
   padding: 10px
 }
-  .custom-pager {
-    position: absolute;
-    bottom: 3%;
-    right: 40px;
-    z-index: 9999;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: right;
-    flex-wrap: wrap;
 
-  }
 
 
 .pager-number {
@@ -249,66 +238,8 @@ ul.bxslider {
 
 }
 
-.block{
-  width: 20%;
-  height: 60%;
-  position: absolute;
-  bottom: 60px;
-  left: 40px;
-  background-color: #F4F4F4;
-  color: black;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-width: 160px;
-  padding: 0 20px;
 
-  span{
-    font-size:50px;
-    font-weight: bold;
-    margin-bottom:20px;
-    &:first-of-type{
-
-      font-weight: normal;}
-
-  }
-  button{
-    font-weight: bold;
-    padding: 15px 25px;
-    background-color: #0BA2D6;
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    margin-top: 20px;
-  }
-
-}
-.progress-container {
-  position: relative;
-  margin-left: 40px;
-  width: calc(100% - 40px);
-  height: 5px;
-}
-
-.progress-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: gray;
-}
-
-.progress-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #0BA2D6;
-}
 }
 
 
