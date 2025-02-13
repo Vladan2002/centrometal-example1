@@ -70,12 +70,12 @@ function decreaseQuantity() {
 function openTab(event, tabName) {
     var i, tabContent, tabButtons;
 
-    tabContent = document.getElementsByClassName("tab-content");
+    tabContent = document.getElementsByClassName("product-table__tab-content");
     for (i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
 
-    tabButtons = document.getElementsByClassName("tab-button");
+    tabButtons = document.getElementsByClassName("product-table__tabs__tab-button");
     for (i = 0; i < tabButtons.length; i++) {
         tabButtons[i].classList.remove("active");
     }

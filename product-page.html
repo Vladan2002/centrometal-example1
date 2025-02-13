@@ -81,8 +81,8 @@
 </div>
 <div class="main-container-product">
     <div class="left-side">
-        <div class="product-information">
-        <div class="slider-container">
+        <div class="left-side__product-information">
+        <div class="left-side__product-information__slider-container">
             <ul class="bxslider">
                 <li><img src="src/assets/masina2.jpg"></li>
                 <li><img src="src/assets/masina1.jpg"></li>
@@ -90,7 +90,7 @@
                 <li><img src="src/assets/masina4.jpg"></li>
             </ul>
 
-            <div class="pager-wrap">
+            <div class="left-side__product-information__slider-container__pager-wrap">
                 <button id="prev-slide">❮</button>
 
                 <div id="bx-pager">
@@ -103,10 +103,10 @@
 
             </div>
         </div>
-        <div class="product-description">
-            <div class="title">
+        <div class="left-side__product-description">
+            <div class="left-side__product-description__title">
             <h1>Gorenje WD 95140 Mašina za pranje u sušenje</h1>
-            <div class="sub-title"> <div class="sub-div">   <span class="price">554$</span></div> <div class="sub-div"> <span>123 456 789</span> <p>Šifra artikla</p> </div> </div>
+            <div class="left-side__product-description__sub-title"> <div class="left-side__product-description__sub-title__sub-div">   <span class="left-side__product-description__sub-title__price">554$</span></div> <div class="left-side__product-description__sub-title__sub-div"> <span>123 456 789</span> <p>Šifra artikla</p> </div> </div>
             </div>
 
             <div class="product-info">
@@ -119,11 +119,11 @@
                 <p>Kapacitet sušenja: 7kg</p>
                 <p>Kapacitet nečega: 7kg</p>
             </div>
-            <div class="social">
+            <div class="left-side__product-description__social">
                 <p>Količina: </p>
-                <input type="text" class="quantity-input" id="quantity" value="10" readonly>
-                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
-                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+                <input type="text" class="left-side__product-description__social__quantity-input" id="quantity" value="1" readonly>
+                <button class="left-side__product-description__social__quantity-button" onclick="decreaseQuantity()">-</button>
+                <button class="left-side__product-description__social__quantity-button" onclick="increaseQuantity()">+</button>
                 <span>+</span>
                 <p>Share:</p>
                 <a href=""><i class="fa-brands fa-facebook-f"></i></a>
@@ -132,7 +132,7 @@
                 <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
             </div>
 
-            <div class="buttons">
+            <div class="left-side__product-description__buttons">
                 <button><i class="fa-solid fa-cart-shopping korpa"></i>Dodaj u korpu</button>
                 <button>Provjeri korpu</button>
             </div>
@@ -142,17 +142,17 @@
 
         <div class="product-table">
 
-            <div class="tabs">
-                <button class="tab-button active" onclick="openTab(event, 'proizvod')">PROIZVODNA LISTA</button>
-                <button class="tab-button" onclick="openTab(event, 'uputstvo')">UPUTSTVO ZA RUKOVANJE</button>
-                <button class="tab-button" onclick="openTab(event, 'ocjena')">OCJENA</button>
-                <button class="tab-button" onclick="openTab(event, 'email')">E-MAIL</button>
+            <div class="product-table__tabs">
+                <button class="product-table__tabs__tab-button active" onclick="openTab(event, 'proizvod')">PROIZVODNA LISTA</button>
+                <button class="product-table__tabs__tab-button" onclick="openTab(event, 'uputstvo')">UPUTSTVO ZA RUKOVANJE</button>
+                <button class="product-table__tabs__tab-button" onclick="openTab(event, 'ocjena')">OCJENA</button>
+                <button class="product-table__tabs__tab-button" onclick="openTab(event, 'email')">E-MAIL</button>
             </div>
 
-            <div id="proizvod" class="tab-content active">
-                <div class="product-infos">
+            <div id="proizvod" class="product-table__tab-content active">
+                <div class="product-table__tab-content__product-infos">
 
-                    <div class="left-side-infos">
+                    <div class="product-table__tab-content__product-infos__left-side-infos">
                     <div>Samostojeći: DA</div>
                     <div>Punjenje sprijeda: DA</div>
                     <div>Elektronsko upravljanje: DA</div>
@@ -166,7 +166,7 @@
                     <div>Senzorsko sušenje: DA</div>
 
                     </div>
-                    <div class="right-side-infos">
+                    <div class="product-table__tab-content__product-infos__right-side-infos">
                     <div>Odgoda početka rada: DA</div>
                     <div>Ručni program: DA</div>
                     <div>Brzi program: DA</div>
@@ -184,11 +184,11 @@
                 </div>
             </div>
 
-            <div id="uputstvo" class="tab-content">
+            <div id="uputstvo" class="product-table__tab-content">
                 <button><a href="src/assets/upustvo.pdf">Upustvo</a></button>
             </div>
 
-            <div id="ocjena" class="tab-content">
+            <div id="ocjena" class="product-table__tab-content">
                 <p>Ocijenite ovaj proizvod</p>
                 <span class="fa fa-star" onclick="rateStar(1)"></span>
                 <span class="fa fa-star" onclick="rateStar(2)"></span>
@@ -197,7 +197,7 @@
                 <span class="fa fa-star" onclick="rateStar(5)"></span>
             </div>
 
-            <div id="email" class="tab-content">
+            <div id="email" class="product-table__tab-content">
                 <div class="container">
 
                     <input type="text" placeholder="E-mail adresa" >
@@ -212,57 +212,58 @@
             </div>
 
 
-            <div class="similar-products">
-                <span>Slicni proizvodi</span>
-                <div class="lines"></div>
-            </div>
-            <div class="products__popusti">
-                <div class="products__popusti__product-bar">
-                    <div class="products__popusti__product-bar__product-card">
-                        <div class="products__popusti__product-bar__product-card__product-img">
-                            <img src="src/assets/zasudje.png" alt="">
-                            <div class="products__popusti__product-bar__product-card__product-img__badge">20%</div>
-                        </div>
-                        <h5>Ugradni frižider</h5>
-                        <span class="products__popusti__product-bar__product-card__timer">10 dan 6 sat 15 min 10 sec</span>
-                        <div class="products__popusti__product-bar__product-card__price">
-                            <span class="products__popusti__product-bar__product-card__old-price">$150.00</span>
-                            <span class="products__popusti__product-bar__product-card__new-price">$90.00</span>
-                        </div>
-                    </div>
 
-                    <div class="products__popusti__product-bar__product-card">
-                        <div class="products__popusti__product-bar__product-card__product-img">
-                            <img src="src/assets/sega.png" alt="">
-                            <div class="products__popusti__product-bar__product-card__product-img__badge">30%</div>
-                        </div>
-                        <h5>Ugradni frizider</h5>
-                        <span class="products__popusti__product-bar__product-card__timer">10dan 6 sat 15 min 10 sec</span>
-                        <div class="products__popusti__product-bar__product-card__price"><span class="products__popusti__product-bar__product-card__old-price">$150.00</span><span class="products__popusti__product-bar__product-card__new-price">$90.00</span></div>
+
+
+
+        </div>
+        <div class="left-side__similar-products">
+            <span>Slicni proizvodi</span>
+            <div class="left-side__similar-products__lines"></div>
+        </div>
+        <div class="products__popusti">
+            <div class="products__popusti__product-bar">
+                <div class="products__popusti__product-bar__product-card">
+                    <div class="products__popusti__product-bar__product-card__product-img">
+                        <img src="src/assets/zasudje.png" alt="">
+                        <div class="products__popusti__product-bar__product-card__product-img__badge">20%</div>
                     </div>
-                    <div class="products__popusti__product-bar__product-card">
-                        <div class="products__popusti__product-bar__product-card__product-img">
-                            <img src="src/assets/frizider.png" alt="">
-                            <div class="products__popusti__product-bar__product-card__product-img__badge">40%</div>
-                        </div>
-                        <h5>Ugradni frizider</h5>
-                        <span class="products__popusti__product-bar__product-card__timer">10dan 6 sat 15 min 10 sec</span>
-                        <div class="products__popusti__product-bar__product-card__price"><span class="products__popusti__product-bar__product-card__old-price">$150.00</span><span class="products__popusti__product-bar__product-card__new-price">$90.00</span></div>
-                    </div>
-                    <div class="products__popusti__product-bar__product-card">
-                        <div class="products__popusti__product-bar__product-card__product-img">
-                            <img src="src/assets/sporet.png" alt="">
-                            <div class="products__popusti__product-bar__product-card__product-img__badge">90%</div>
-                        </div>
-                        <h5>Ugradni frizider</h5>
-                        <span class="products__popusti__product-bar__product-card__timer">10dan 6 sat 15 min 10 sec</span>
-                        <div class="products__popusti__product-bar__product-card__price"><span class="products__popusti__product-bar__product-card__old-price">$150.00</span><span class="products__popusti__product-bar__product-card__new-price">$90.00</span></div>
+                    <h5>Ugradni frižider</h5>
+                    <span class="products__popusti__product-bar__product-card__timer">10 dan 6 sat 15 min 10 sec</span>
+                    <div class="products__popusti__product-bar__product-card__price">
+                        <span class="products__popusti__product-bar__product-card__old-price">$150.00</span>
+                        <span class="products__popusti__product-bar__product-card__new-price">$90.00</span>
                     </div>
                 </div>
 
+                <div class="products__popusti__product-bar__product-card">
+                    <div class="products__popusti__product-bar__product-card__product-img">
+                        <img src="src/assets/sega.png" alt="">
+                        <div class="products__popusti__product-bar__product-card__product-img__badge">30%</div>
+                    </div>
+                    <h5>Ugradni frizider</h5>
+                    <span class="products__popusti__product-bar__product-card__timer">10dan 6 sat 15 min 10 sec</span>
+                    <div class="products__popusti__product-bar__product-card__price"><span class="products__popusti__product-bar__product-card__old-price">$150.00</span><span class="products__popusti__product-bar__product-card__new-price">$90.00</span></div>
+                </div>
+                <div class="products__popusti__product-bar__product-card">
+                    <div class="products__popusti__product-bar__product-card__product-img">
+                        <img src="src/assets/frizider.png" alt="">
+                        <div class="products__popusti__product-bar__product-card__product-img__badge">40%</div>
+                    </div>
+                    <h5>Ugradni frizider</h5>
+                    <span class="products__popusti__product-bar__product-card__timer">10dan 6 sat 15 min 10 sec</span>
+                    <div class="products__popusti__product-bar__product-card__price"><span class="products__popusti__product-bar__product-card__old-price">$150.00</span><span class="products__popusti__product-bar__product-card__new-price">$90.00</span></div>
+                </div>
+                <div class="products__popusti__product-bar__product-card">
+                    <div class="products__popusti__product-bar__product-card__product-img">
+                        <img src="src/assets/sporet.png" alt="">
+                        <div class="products__popusti__product-bar__product-card__product-img__badge">90%</div>
+                    </div>
+                    <h5>Ugradni frizider</h5>
+                    <span class="products__popusti__product-bar__product-card__timer">10dan 6 sat 15 min 10 sec</span>
+                    <div class="products__popusti__product-bar__product-card__price"><span class="products__popusti__product-bar__product-card__old-price">$150.00</span><span class="products__popusti__product-bar__product-card__new-price">$90.00</span></div>
+                </div>
             </div>
-
-
 
         </div>
 
@@ -276,14 +277,14 @@
         </video>
 
 
-        <div class="newsletter newsletter-product">
+        <div class="ads-div__newsletter newsletter-product">
             <p>
                 <i class="fa-solid fa-envelope"></i>
                 Prijavi se na newsletter
             </p>
             <input type="text" placeholder="Ime i prezime">
             <input type="text" placeholder="Email">
-            <button class="button__blue">Prijavi se</button>
+            <button class="ads-div__button__blue">Prijavi se</button>
         </div>
     </div>
 
@@ -301,52 +302,52 @@
         </ul>
     </div>
 
-    <div class="footer-container">
-        <div class="footer">
-            <div class="footer-content">
-                <h5>Informacije</h5>
-                <p>O nama</p>
-                <p>Gdje kupiti</p>
-                <p>Zaposljenje</p>
-                <p>Aktivnosti</p>
-            </div>
-
-            <div class="footer-content">
-                <h5>Aktivnosti</h5>
-                <p>Akcije</p>
-                <p>Noviteti</p>
-                <p>Rasprodaja</p>
-                <p>Marketing</p>
-            </div>
-
-            <div class="footer-content">
-                <h5>Moja strana</h5>
-                <p>Registracija</p>
-                <p>Prijava</p>
-                <p>Korisnička strana</p>
-                <p>Korpa</p>
-            </div>
-
-            <div class="footer-content">
-                <h5>Plaćanje i dostava</h5>
-                <p>Načini plaćanja</p>
-                <p>Sigurnost plaćanja</p>
-                <p>Brza i pouzdana dostava</p>
-                <p>Odaberite datum dostave</p>
-            </div>
-
-            <div class="footer-content">
-                <h5>Povrat i zamjena</h5>
-                <p>Servis</p>
-                <p>Reklamacije</p>
-            </div>
+<div class="footer-container">
+    <div class="footer-container__footer">
+        <div class="footer-container__footer__footer-content">
+            <h5>Informacije</h5>
+            <p>O nama</p>
+            <p>Gdje kupiti</p>
+            <p>Zaposljenje</p>
+            <p>Aktivnosti</p>
         </div>
 
-        <div class="copyright">
-            <p>© 2016 Copyright by <a href="">centrometal.me</a> All rights reserved</p>
+        <div class="footer-container__footer__footer-content">
+            <h5>Aktivnosti</h5>
+            <p>Akcije</p>
+            <p>Noviteti</p>
+            <p>Rasprodaja</p>
+            <p>Marketing</p>
         </div>
 
+        <div class="footer-container__footer__footer-content">
+            <h5>Moja strana</h5>
+            <p>Registracija</p>
+            <p>Prijava</p>
+            <p>Korisnička strana</p>
+            <p>Korpa</p>
+        </div>
+
+        <div class="footer-container__footer__footer-content">
+            <h5>Plaćanje i dostava</h5>
+            <p>Načini plaćanja</p>
+            <p>Sigurnost plaćanja</p>
+            <p>Brza i pouzdana dostava</p>
+            <p>Odaberite datum dostave</p>
+        </div>
+
+        <div class="footer-container__footer__footer-content">
+            <h5>Povrat i zamjena</h5>
+            <p>Servis</p>
+            <p>Reklamacije</p>
+        </div>
     </div>
+
+    <div class="footer-container__copyright">
+        <p>© 2016 Copyright by <a href="">centrometal.me</a> All rights reserved</p>
+    </div>
+
+</div>
 
 
 
