@@ -1,35 +1,28 @@
-body{
-  margin: 0;
-}
 
 .navbar {
-  &__gray-navbar {
+  &__gray{
     display: flex;
     padding: 0 13%;
     background-color: #CCCCCC;
 
-    &__left-side {
+    &__left{
       width: 80%;
       display: flex;
       gap: 2rem;
 
-      p {
-        padding: 0;
-        margin: 0;
-      }
-    }
 
-    &__right-side {
+    }
+    &__text {
+      padding: 0;
+      margin: 0;
+    }
+    &__right{
       width: 30%;
       display: flex;
       gap: 2rem;
       justify-content: flex-end;
       align-items: flex-end;
 
-      p {
-        padding: 0;
-        margin: 0;
-      }
     }
   }
 
@@ -43,7 +36,7 @@ body{
       width: 100%;
       height: 80px;}
 
-      &__header-left {
+      &__left {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -52,31 +45,30 @@ body{
         font-size: 40px;
         font-stretch: ultra-expanded;
 
-        &__logo {
+        &--logo {
           flex-wrap: nowrap;
           white-space: nowrap;
+        }
 
+        &--text {
+          display: inline-block;
+          transform: scale(1, 1.5);
+          color: #fff;
+          font-weight: bold;
 
-          span {
-            display: inline-block;
-            transform: scale(1, 1.5);
-            color: #fff;
-            font-weight: bold;
-
-            &:first-child {
-              color: #0BA2D6;
-            }
+          &:first-child {
+            color: #0BA2D6;
           }
         }
       }
 
-      &__header-right {
+      &__right {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 58%;
 
-        &__search {
+        &--search {
           width: 70%;
           flex-wrap: nowrap;
 
@@ -86,13 +78,45 @@ body{
             color: #0BA2D6;
           }
 
-          input {
-            width: 90%;
-            margin-right: 1px;
-            border: none;
-            padding: 15px;
+        }
 
-          }
+
+        &--input {
+          width: 90%;
+          margin-right: 1px;
+          border: none;
+          padding: 15px;
+
+        }
+
+
+        &--link {
+          font-size: 18px;
+          color: #333;
+          text-decoration: none;
+          border: 3px solid #0BA2D6;
+          border-radius: 50%;
+          padding: 1px;
+          transition: 0.3s;
+
+        }
+
+        &--text {
+          margin: 0 3px 0 0;
+          padding: 0;
+          color: #fff;
+          font-weight: bold;
+        }
+        &--icon{
+
+          padding: 3px;
+          width: 25px;
+          height: 25px;
+          align-content: center;
+          text-align: center;
+          color: #fff;
+
+
         }
 
         &__buy {
@@ -101,18 +125,8 @@ body{
           justify-content: flex-end;
           align-items: center;
 
-          a {
-            font-size: 18px;
-            color: #333;
-            text-decoration: none;
-            border: 3px solid #0BA2D6;
-            border-radius: 50%;
-            padding: 1px;
-            transition: 0.3s;
 
-          }
-
-          i {
+          .facebook-mod {
             padding: 3px;
             width: 25px;
             height: 25px;
@@ -122,19 +136,9 @@ body{
 
           }
 
-          i.korpa {
-
-            padding: 3px;
-            width: 25px;
-            height: 25px;
-            align-content: center;
-            text-align: center;
-            color: #fff;
 
 
-          }
-
-          a.korpa {
+          .moja-korpa {
             margin-left: 5px;
             margin-right: 3px;
             color: #0BA2D6;
@@ -142,26 +146,21 @@ body{
             font-size: 14px;
           }
 
-          p {
-            margin: 0 3px 0 0;
-            padding: 0;
-            color: #fff;
-            font-weight: bold;
-          }
+
         }
 
       }
 
   }
 
-  &__small-nav {
+  &__small {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     padding: 0 0;
 
-    &__select-menu {
+    &__select {
       width: 74%;
       display: flex;
       justify-content: space-between;
@@ -169,7 +168,7 @@ body{
       background-color: #00ADF0;
       height: 50px;
 
-      a {
+      &--button{
         display: flex;
         background-color: #00ADF0;
         flex-grow: 1;
@@ -189,7 +188,7 @@ body{
         }
 
         &:last-child {
-          padding: 5px 13px 13px 13px;
+          padding: 3px 13px 12px 13px;
           text-align: start;
           cursor: auto;
 
@@ -198,27 +197,26 @@ body{
             transform: none;
           }
 
-          p {
-            &:first-child {
-              color: rgba(0, 0, 0, 0.5);
-            }
-          }
+
         }
 
 
       }
 
-      i {
+      &--text{
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        &:first-child {
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      &--icon {
         color: #fff;
 
       }
 
-      p {
-        padding: 0;
-        margin: 0;
-        font-size: 14px;
 
-      }
     }
   }
 
@@ -247,7 +245,7 @@ body{
     color: white;
     cursor: pointer;
 
-    i{
+    &--icon{
       padding:0;
     }
 

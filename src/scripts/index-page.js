@@ -26,7 +26,7 @@ function navbar(element) {
 
 }
 function toggleSubcategories(category) {
-    const subcategories = document.querySelectorAll(`.ads-div__menu__button__subcategory[data-category="${category}"]`);
+    const subcategories = document.querySelectorAll(`.side-bar__menu__button--subcategory[data-category="${category}"]`);
 
     subcategories.forEach(sub => {
     sub.classList.toggle('deactivate-button');
@@ -54,7 +54,7 @@ function increaseQuantity() {
     let input = document.getElementById("quantity");
     let value = parseInt(input.value, 10);
     value = isNaN(value) ? 1 : value + 1;
-    input.value = value.toString().padStart(2, '0');
+    input.value = value.toString().padStart(2);
 }
 
 function decreaseQuantity() {
@@ -63,19 +63,19 @@ function decreaseQuantity() {
     if (value > 1) {
         value--;
     }
-    input.value = value.toString().padStart(2, '0');
+    input.value = value.toString().padStart(2);
 }
 
 
 function openTab(event, tabName) {
     var i, tabContent, tabButtons;
 
-    tabContent = document.getElementsByClassName("product-table__tab-content");
+    tabContent = document.getElementsByClassName("table__content");
     for (i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
 
-    tabButtons = document.getElementsByClassName("product-table__tabs__tab-button");
+    tabButtons = document.getElementsByClassName("table__tabs__button");
     for (i = 0; i < tabButtons.length; i++) {
         tabButtons[i].classList.remove("active");
     }
@@ -137,8 +137,8 @@ $(document).ready(function(){
     });
 
     // Aktivni thumbnail efekat
-    $('#bx-pager a').on('click', function(){
-        $('#bx-pager a').removeClass('active');
+    $('.left__product__slider--link').on('click', function(){
+        $('.left__product__slider--link').removeClass('active');
         $(this).addClass('active');
     });
 });
@@ -159,7 +159,7 @@ $(document).ready(function() {
 
     console.log("BX Slider initialized:", $slider);
 
-    var totalSlides = $(".slider .slide-img").length;
+    var totalSlides = $(".slider .products__slide-show__slide").length;
     var customPager = $('.products__slide-show__custom-pager');
 
     console.log("Total slides:", totalSlides);

@@ -14,35 +14,35 @@
 </head>
 <body>
 <div class="navbar">
-<div class="navbar__gray-navbar">
-    <div class="navbar__gray-navbar__left-side"><p class="navbar__gray-navbar__left-side__basic-info">Engleski</p>
-        <p class="navbar__gray-navbar__left-side__basic-info"> Crnogorski </p>
-        <p class="navbar__gray-navbar__left-side__basic-info"> Svakog dana od 08:00 do 21:00 h, osim nedeljom Tel: +382 20 656 772</p></div>
-    <div class="navbar__gray-navbar__right-side"><p>On-line Podrska </p>
-        <p> Registracija</p>
-        <p> Prijava</p></div>
+<div class="navbar__gray">
+    <div class="navbar__gray__left"><p class="navbar__gray__text">Engleski</p>
+        <p class="navbar__gray__text"> Crnogorski </p>
+        <p class="navbar__gray__text"> Svakog dana od 08:00 do 21:00 h, osim nedeljom Tel: +382 20 656 772</p></div>
+    <div class="navbar__gray__right"><p class="navbar__gray__text">On-line Podrska </p>
+        <p class="navbar__gray__text"> Registracija</p>
+        <p class="navbar__gray__text"> Prijava</p></div>
 </div>
 <header class="navbar__header">
     <div class="navbar__header__container">
-        <div class="navbar__header__header-left">
-            <div class="navbar__header__header-left__logo">
-                <span class="stretch">CENTRO</span><span class="stretch">METAL</span>
+        <div class="navbar__header__left">
+            <div class="navbar__header__left--logo">
+                <span class="navbar__header__left--text">CENTRO</span><span class="navbar__header__left--text">METAL</span>
             </div>
 
 
         </div>
-        <div class="navbar__header__header-right">
-            <div class="navbar__header__header-right__search">
-                <input type="text" placeholder="Unesi šifru ili pojam pretraživanja">
+        <div class="navbar__header__right">
+            <div class="navbar__header__right--search">
+                <input class="navbar__header__right--input" type="text" placeholder="Unesi šifru ili pojam pretraživanja">
                 <i class="fa-solid fa-magnifying-glass magnify"></i>
             </div>
-            <div class="navbar__header__header-right__buy">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="korpa">MOJA KORPA</a>
-                <p>0.00$</p>
-                <a href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping korpa"></i></a>
+            <div class="navbar__header__right__buy">
+                <a class="navbar__header__right--link" href="#"><i class="fa-brands fa-facebook-f facebook-mod"></i></a>
+                <a class="navbar__header__right--link moja-korpa" href="#" >MOJA KORPA</a>
+                <p class="navbar__header__right--text">0.00$</p>
+                <a class="navbar__header__right--link" href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping navbar__header__right--icon"></i></a>
                 <div class="navbar__burger-menu" onclick="toggleMenu()">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-bars navbar__burger-menu--icon"></i>
                 </div>
             </div>
         </div>
@@ -50,23 +50,23 @@
     </div>
 </header>
 
-    <div class="navbar__small-nav">
+    <div class="navbar__small">
         <div class="navbar__trapezoid-left"></div>
 
 
-        <div class="navbar__small-nav__select-menu" id="select-menu">
-            <a href="#" onclick="navbar(this)"><i class="fa-solid fa-house"></i></a>
-            <a href="#" onclick="navbar(this)">Akcija</a>
-            <a href="#" onclick="navbar(this)">Rasprodaja</a>
-            <a href="#" onclick="navbar(this)">Katalozi</a>
-            <a href="#" onclick="navbar(this)">Novosti</a>
-            <a href="#" onclick="navbar(this)">O nama</a>
-            <a href="#" onclick="navbar(this)">Uradi sam</a>
-            <a href="#" onclick="navbar(this)">Vip kartica</a>
-            <a href="#" onclick="navbar(this)">Kontakt</a>
-            <a href="#">
-                <p>Informacije</p>
-                <p>tel: 020 123 456</p>
+        <div class="navbar__small__select" id="select-menu">
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)"><i class="fa-solid fa-house navbar__small__select--icon"></i></a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Akcija</a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Rasprodaja</a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Katalozi</a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Novosti</a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">O nama</a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Uradi sam</a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Vip kartica</a>
+            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Kontakt</a>
+            <a class="navbar__small__select--button" href="#">
+                <p class="navbar__small__select--text">Informacije</p>
+                <p class="navbar__header__right--text">tel: 020 123 456</p>
             </a>
         </div>
 
@@ -75,97 +75,181 @@
 
 </div>
 <div class="main-container">
-    <div class="ads-div">
-        <div class="ads-div__menu" id="menu">
-            <button onclick="categories()"><img src="src/assets/grid.png" alt=""><p>Kupuj po kategoriji</p></button>
-            <button onclick="toggleSubcategories('bijela-tehnika')"><p>Bijela Tehnika</p>
-                <p>+</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="bijela-tehnika"><p>Sporet</p>
-                </button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="bijela-tehnika"><p>Frizider</p>
-             </button>
-            <button onclick="toggleSubcategories('ugradna-tehnika')"><p>Ugradna Tehnika</p>
-                <p>+</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="ugradna-tehnika"><p>Indukciona ploca</p>
+    <div class="side-bar">
+        <div class="side-bar__menu" id="menu">
+            <button class="side-bar__menu__button" onclick="categories()">
+                <img class="side-bar__menu__button--img" src="src/assets/grid.png" alt="">
+                <p class="side-bar__menu__text side-bar__menu__text--case">Kupuj po kategoriji</p>
             </button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="ugradna-tehnika"><p>Ugradna rerna</p>
+
+            <button class="side-bar__menu__button" onclick="toggleSubcategories('bijela-tehnika')">
+                <p class="side-bar__menu__text">Bijela Tehnika</p>
+                <p class="side-bar__menu__text">+</p>
             </button>
-            <button><p>Klimatizacija i grijanje</p></button>
-            <button onclick="toggleSubcategories('kucni-aparati')"><p>Mali kućni aparati</p>
-                <p>+</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="kucni-aparati"><p>Kafe aparati</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="kucni-aparati"><p>Kuvala</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="kucni-aparati"><p>Mikseri</p></button>
-            <button onclick="toggleSubcategories('TV')"><p>TV i video</p><p>+</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="TV"><p>TV</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="TV"><p>dvd plejeri</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="TV"><p>projektori</p></button>
 
-            <button onclick="toggleSubcategories('Audio')"><p>Audio</p><p>+</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="Audio"><p>Zvucnici</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="Audio"><p>mikrofoni</p></button>
-            <button class="ads-div__menu__button__subcategory deactivate-button" data-category="Audio"><p>Audio nesto</p></button>
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="bijela-tehnika">
+                <p class="side-bar__menu__text">Sporet</p>
+            </button>
 
+            <button class=" side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="bijela-tehnika">
+                <p class=" side-bar__menu__text">Frizider</p>
+            </button>
 
-            <button><p>Telefonija</p>
-                <p>+</p></button>
-            <button><p>Kamere i foto aparati</p></button>
-            <button><p>Auto tehnika</p></button>
-            <button><p>Računari i periferije</p></button>
-            <button><p>Konzole i igrice</p></button>
-            <button><p>Posteljine</p></button>
-            <button><p>Kupovina preko t-coma</p></button>
+            <button class="side-bar__menu__button" onclick="toggleSubcategories('ugradna-tehnika')">
+                <p class="side-bar__menu__text">Ugradna Tehnika</p>
+                <p class="side-bar__menu__text">+</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="ugradna-tehnika">
+                <p class="side-bar__menu__text">Indukciona ploca</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="ugradna-tehnika">
+                <p class="side-bar__menu__text">Ugradna rerna</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Klimatizacija i grijanje</p>
+            </button>
+
+            <button class="side-bar__menu__button" onclick="toggleSubcategories('kucni-aparati')">
+                <p class="side-bar__menu__text">Mali kućni aparati</p>
+                <p class="side-bar__menu__text">+</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="kucni-aparati">
+                <p class="side-bar__menu__text">Kafe aparati</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="kucni-aparati">
+                <p class="side-bar__menu__text">Kuvala</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="kucni-aparati">
+                <p class="side-bar__menu__text">Mikseri</p>
+            </button>
+
+            <button class="side-bar__menu__button" onclick="toggleSubcategories('TV')">
+                <p class="side-bar__menu__text">TV i video</p>
+                <p class="side-bar__menu__text">+</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="TV">
+                <p class="side-bar__menu__text">TV</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="TV">
+                <p class="side-bar__menu__text">DVD plejeri</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="TV">
+                <p class="side-bar__menu__text">Projektori</p>
+            </button>
+
+            <button class="side-bar__menu__button" onclick="toggleSubcategories('Audio')">
+                <p class="side-bar__menu__text">Audio</p>
+                <p class="side-bar__menu__text">+</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="Audio">
+                <p class="side-bar__menu__text">Zvucnici</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="Audio">
+                <p class="side-bar__menu__text">Mikrofoni</p>
+            </button>
+
+            <button class="side-bar__menu__button side-bar__menu__button--subcategory deactivate-button" data-category="Audio">
+                <p class="side-bar__menu__text">Audio nesto</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Telefonija</p>
+                <p class="side-bar__menu__text">+</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Kamere i foto aparati</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Auto tehnika</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Računari i periferije</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Konzole i igrice</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Posteljine</p>
+            </button>
+
+            <button class="side-bar__menu__button">
+                <p class="side-bar__menu__text">Kupovina preko t-coma</p>
+            </button>
 
         </div>
 
-        <div class="ads-div__search-brand">
+        <div class="side-bar__search-brand">
             <i class="fa-solid fa-envelope"></i>
             Pretraži po brendu
-            <input type="text">
+            <input class="side-bar__search-brand__input" type="text">
             <i class="fa-solid fa-magnifying-glass magnify"></i>
 
         </div>
-        <div class="ads-div__ad">
-            <img src="src/assets/cipele.jpg" alt="">
-            <p>Fashion cipele</p>
-            <p>Veneno</p>
+        <div class="side-bar__search-brand">
+            <i class="fa-solid fa-envelope"></i>
+            Pretraži po brendu
+            <input class="side-bar__search-brand__input" type="text">
+            <i class="fa-solid fa-magnifying-glass magnify"></i>
 
         </div>
-        <div class="ads-div__newsletter">
+        <div class="side-bar__ad">
+            <img class="side-bar__ad__img" src="src/assets/cipele.jpg" alt="">
+            <p class="side-bar__ad__text">Fashion cipele</p>
+            <p class="side-bar__ad__text">Veneno</p>
+
+        </div>
+        <div class="side-bar__newsletter">
             <p>
                 <i class="fa-solid fa-envelope"></i>
                 prijavi se na newsletter
             </p>
-            <input type="text" placeholder="Ime i prezime">
-            <input type="text" placeholder="Email">
-            <button class="ads-div__button-blue">Prijavi se</button>
+            <input class="side-bar__newsletter__input" type="text" placeholder="Ime i prezime">
+            <input class="side-bar__newsletter__input" type="text" placeholder="Email">
+            <button class="side-bar__button-blue">Prijavi se</button>
         </div>
-        <div class="ads-div__makita-post">
-            <div>
-            <img src="src/assets/makita.jpg" alt="">
+        <div class="side-bar__makita-post">
+            <div class="side-bar__makita-post__img-wrap">
+                <img class="side-bar__makita-post__img"  src="src/assets/makita.jpg" alt="">
             </div>
-            <h5>Lorem ipsum dolor sit amet.</h5>
+            <h5 class="side-bar__makita-post__title">Lorem ipsum dolor sit amet.</h5>
             <p>consectetur adipisicing elit.
                 Aperiam commodi cumque dicta, dignissimos,
                 dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus
                 reprehenderit repudiandae.</p>
-            <button class="ads-div__button-blue">Opširnije</button>
+
+            <button class="side-bar__button-blue">Opširnije</button>
         </div>
-        <div class="ads-div__makita-post">
-            <div>
-            <img src="src/assets/makita.jpg" alt="">
+        <div class="side-bar__makita-post">
+            <div class="side-bar__makita-post__img-wrap">
+                <img class="side-bar__makita-post__img"  src="src/assets/makita.jpg" alt="">
             </div>
-            <h5>Lorem ipsum dolor sit amet.</h5>
+            <h5 class="side-bar__makita-post__title">Lorem ipsum dolor sit amet.</h5>
             <p>consectetur adipisicing elit.
                 Aperiam commodi cumque dicta, dignissimos,
                 dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus
                 reprehenderit repudiandae.</p>
-            <button class="ads-div__button-blue">Opširnije</button>
-        </div>
-        <div class="ads-div__ad">
-            <img src="src/assets/rostilj.jpg" alt="">
-            <p>Fashion cipele</p>
-            <p>Veneno</p>
+
+            <button class="side-bar__button-blue">Opširnije</button>
+        </div>        <div class="side-bar__ad">
+            <img  class="side-bar__ad__img" src="src/assets/rostilj.jpg" alt="">
+            <p class="side-bar__ad__text">Fashion cipele</p>
+            <p class="side-bar__ad__text">Veneno</p>
 
         </div>
     </div>
@@ -195,7 +279,8 @@
 
         <div class="products__shape">
 
-                <div class="products__shape__trapez trapez-darkblue">
+
+                <div class="products__shape__trapez products__shape__trapez--dark">
                     <p class="products__shape__text"><i class="fa-solid fa-fire"></i> Vruća ponuda</p></div>
 
         </div>
@@ -564,7 +649,7 @@
         </div>
 
         <div class="products__shape">
-                <div class="products__shape__trapez trapez-yellow">
+                <div class="products__shape__trapez products__shape__trapez--yellow">
                     <p class="products__shape__text"> <i class="fa-solid fa-sun"></i> Rasprodaja</p></div>
 
         </div>
@@ -624,7 +709,7 @@
                     </div>
                 </div>
             </div>
-            <button class="products__discounts__button yellow">Pogledajte sve proizvode iz vruće ponude</button>
+            <button class="products__discounts__button products__discounts__button--yellow ">Pogledajte sve proizvode iz vruće ponude</button>
 
         </div>
 
@@ -643,7 +728,7 @@
             </p>
             <input class="products__newsletter__input" type="text" placeholder="Ime i prezime">
             <input class="products__newsletter__input" type="text" placeholder="Email">
-            <button class="ads-div__button-blue">Prijavi se</button>
+            <button class="side-bar__button-blue">Prijavi se</button>
         </div>
 
         <div class="products__makita-post">
@@ -655,7 +740,7 @@
                 Aperiam commodi cumque dicta, dignissimos,
                 dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus
                 reprehenderit repudiandae.</p>
-            <button class="ads-div__button-blue">Opširnije</button>
+            <button class="side-bar__button-blue">Opširnije</button>
         </div>
         <div class="products__makita-post">
             <div class="products__makita-post__img-wrap">
@@ -666,7 +751,7 @@
                 Aperiam commodi cumque dicta, dignissimos,
                 dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus
                 reprehenderit repudiandae.</p>
-            <button class="ads-div__button-blue">Opširnije</button>
+            <button class="side-bar__button-blue">Opširnije</button>
         </div>
     </div>
 
@@ -683,49 +768,50 @@
     </ul>
 </div>
 
-<div class="footer-container">
-<div class="footer-container__footer">
-    <div class="footer-container__footer__footer-content">
-        <h5>Informacije</h5>
-        <p>O nama</p>
-        <p>Gdje kupiti</p>
-        <p>Zaposljenje</p>
-        <p>Aktivnosti</p>
+<div class="bottom-container">
+<div class="bottom-container__footer">
+    <div class="bottom-container__footer__content">
+        <h5 class="bottom-container__footer__title">Informacije</h5>
+        <p class="bottom-container__footer__text">O nama</p>
+        <p class="bottom-container__footer__text">Gdje kupiti</p>
+        <p class="bottom-container__footer__text">Zaposljenje</p>
+        <p class="bottom-container__footer__text">Aktivnosti</p>
     </div>
 
-    <div class="footer-container__footer__footer-content">
-        <h5>Aktivnosti</h5>
-        <p>Akcije</p>
-        <p>Noviteti</p>
-        <p>Rasprodaja</p>
-        <p>Marketing</p>
+    <div class="bottom-container__footer__content">
+        <h5 class="bottom-container__footer__title">Aktivnosti</h5>
+        <p class="bottom-container__footer__text">Akcije</p>
+        <p class="bottom-container__footer__text">Noviteti</p>
+        <p class="bottom-container__footer__text">Rasprodaja</p>
+        <p class="bottom-container__footer__text">Marketing</p>
     </div>
 
-    <div class="footer-container__footer__footer-content">
-        <h5>Moja strana</h5>
-        <p>Registracija</p>
-        <p>Prijava</p>
-        <p>Korisnička strana</p>
-        <p>Korpa</p>
+    <div class="bottom-container__footer__content">
+        <h5 class="bottom-container__footer__title">Moja strana</h5>
+        <p class="bottom-container__footer__text">Registracija</p>
+        <p class="bottom-container__footer__text">Prijava</p>
+        <p class="bottom-container__footer__text">Korisnička strana</p>
+        <p class="bottom-container__footer__text">Korpa</p>
     </div>
 
-    <div class="footer-container__footer__footer-content">
-        <h5>Plaćanje i dostava</h5>
-        <p>Načini plaćanja</p>
-        <p>Sigurnost plaćanja</p>
-        <p>Brza i pouzdana dostava</p>
-        <p>Odaberite datum dostave</p>
+    <div class="bottom-container__footer__content">
+        <h5 class="bottom-container__footer__title">Plaćanje i dostava</h5>
+        <p class="bottom-container__footer__text">Načini plaćanja</p>
+        <p class="bottom-container__footer__text">Sigurnost plaćanja</p>
+        <p class="bottom-container__footer__text">Brza i pouzdana dostava</p>
+        <p class="bottom-container__footer__text">Odaberite datum dostave</p>
     </div>
 
-    <div class="footer-container__footer__footer-content">
-        <h5>Povrat i zamjena</h5>
-        <p>Servis</p>
-        <p>Reklamacije</p>
+    <div class="bottom-container__footer__content">
+        <h5 class="bottom-container__footer__title">Povrat i zamjena</h5>
+        <p class="bottom-container__footer__text">Servis</p>
+        <p class="bottom-container__footer__text">Reklamacije</p>
     </div>
+
 </div>
 
-    <div class="footer-container__copyright">
-        <p>© 2016 Copyright by <a href="">centrometal.me</a> All rights reserved</p>
+    <div class="bottom-container__copyright">
+        <p class="bottom-container__copyright__text">© 2016 Copyright by <a href="">centrometal.me</a> All rights reserved</p>
     </div>
 
 </div>

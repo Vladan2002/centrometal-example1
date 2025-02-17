@@ -1,37 +1,19 @@
-
-
-
-
+//Navbar
 @media (max-width: 1230px) {
-
-  .trapez-div {
-  }
-
-
-
-
-  .bx-wrapper {
-    width: 80%;
-    margin: 0 20px !important;
-    padding: 0 !important;
-  }
-
-
-
   .navbar {
-    &__gray-navbar {
+    &__gray {
       display: none;
     }
 
     &__header {
-      padding: 10px 0 !important;
+      padding: 15px 0 !important;
 
-      &__header-left {
+      &__left {
         justify-content: center;
         margin-bottom: 20px;
       }
 
-      &__header-right {
+      &__right {
         width: 100%;
 
         display: flex;
@@ -40,16 +22,15 @@
         flex-direction: column;
         gap: 2px;
 
-        &__search {
+        &--input {
+          min-width: 200px;
+
+        }
+
+        &--search {
           width: 80% !important;
           flex-wrap: nowrap;
           max-width: 300px;
-
-
-          input {
-            min-width: 200px;
-
-          }
         }
 
         &__buy {
@@ -69,9 +50,12 @@
         height: 100%;
 
 
-        span {
-          font-size: 20px;
-        }
+      }
+
+      &__left--text {
+
+        font-size: 30px;
+
       }
     }
 
@@ -80,8 +64,8 @@
       display: block !important;
     }
 
-    &__small-nav {
-      &__select-menu {
+    &__small {
+      &__select {
         display: none !important;
         flex-direction: column;
         position: absolute;
@@ -92,7 +76,7 @@
         z-index: 99999;
 
 
-        a {
+        &--button {
           display: block;
           text-align: center !important;
           padding: 15px 0 !important;
@@ -103,7 +87,7 @@
         }
       }
 
-      &__select-menu.active {
+      &__select.active {
         display: flex !important;
       }
     }
@@ -112,6 +96,18 @@
       display: none !important;
     }
   }
+}
+
+
+//Index page
+
+@media (max-width: 1230px) {
+
+  .bx-wrapper {
+    width: 80%;
+    margin: 0 20px !important;
+    padding: 0 !important;
+  }
 
   .main-container {
     margin: 0 !important;
@@ -119,41 +115,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    .ads-div {
-      width: 100%;
-
-      &__menu {
-        margin: 0 !important;
-
-        button {
-          &:first-child {
-            &:hover {
-              transform: none !important;
-              border: none !important;
-
-              img {
-                transform: scale(1.20) !important;
-              }
-
-              p {
-                margin-left: 10px !important;
-                transform: scale(1.05) !important;
-              }
-            }
-          }
-        }
-      }
-
-      &__ad {
-        display: none;
-      }
-
-
-      &__makita-post, &__search-brand, &__newsletter {
-        display: none;
-      }
-    }
 
     .products {
       width: 100% !important;
@@ -164,6 +125,7 @@
 
       &__slide-show {
         padding: 0 !important;
+
         &__progress-container {
           margin: 0 20px !important;
         }
@@ -171,48 +133,51 @@
         &__custom-pager {
           right: 60px !important;
         }
-        &__image-overlay {
-          &__block {
-            left: 10px !important;
-            top: 10px !important;
-            bottom: 55% !important;
-            height: auto !important;
-            width: auto !important;
-            min-width: auto !important;
-            padding: 20px 10px !important;
 
-            span {
-              font-size: 20px !important;
-              margin-bottom: 10px;
 
-              &:first-of-type {
-                font-weight: normal;
-              }
-            }
+        &__block {
+          left: 10px !important;
+          top: 10px !important;
+          bottom: 60% !important;
+          height: auto !important;
+          width: auto !important;
+          min-width: auto !important;
+          padding: 20px 10px !important;
 
-            button {
-              padding: 5px 15px !important;
+          &__title {
+            font-size: 20px !important;
+            margin-bottom: 10px;
+
+            &:first-of-type {
+              font-weight: normal;
             }
           }
+
+          &__button {
+            padding: 5px 15px !important;
+          }
         }
+
       }
-      &__trapez-div {
-        a {
+
+      &__shape {
+        &__trapez {
           margin: 20px 0 !important;
           font-size: 10px;
 
         }
       }
-      &__popusti {
-        button {
+
+      &__discounts {
+        &__button {
           padding: 10px 5px !important;
         }
 
-        &__product-bar {
-          &__product-card {
+        .product-bar {
+          &__card {
             min-width: 100px;
 
-            img {
+            &__img {
               width: 100px !important;
               aspect-ratio: 1/1.2;
             }
@@ -221,7 +186,7 @@
 
       }
 
-      &__makita-post-two, &__search-brand-two, &__newsletter-two {
+      &__makita-post, &__search-brand, &__newsletter {
         display: block;
         margin-top: 10px;
 
@@ -229,12 +194,6 @@
     }
 
   }
-
-
-
-
-
-
 
 
   .slider-two {
@@ -245,6 +204,7 @@
       width: 80% !important;
       margin: 0 10% !important;
     }
+
     .bx-prev, .bx-next {
       display: none !important;
     }
@@ -255,16 +215,14 @@
   }
 
 
-  .footer-container {
-
-
-
-
+  //Footer
+  .bottom-container {
 
     &__copyright {
       width: 100% !important;
-      padding: 10px 0!important;
-      p{
+      padding: 10px 0 !important;
+
+      &__text {
         margin-left: 50px !important;
       }
     }
@@ -277,7 +235,7 @@
       flex-direction: column;
 
 
-      &__footer-content {
+      &__content {
         width: 80% !important;
         padding-left: 50px !important;
         border: none !important;
@@ -287,34 +245,107 @@
     }
   }
 
-  .newsletter-product {
-    display: block !important;
 
-    button {
-      max-width: 200px;
+}
+
+@media(max-width: 1230px) {
+  .side-bar {
+    width: 100%;
+
+    &__menu {
+      margin: 0 !important;
+
+      &__button {
+
+        &:hover {
+          transform: none !important;
+          border: none !important;
+
+          .side-bar__menu__button--img {
+            transform: scale(1.20) !important;
+          }
+
+          .side-bar__menu__text {
+            margin-left: 10px !important;
+            transform: scale(1.05) !important;
+          }
+        }
+
+      }
+    }
+
+    &__ad {
+      display: none;
+    }
+
+
+    &__makita-post, &__search-brand, &__newsletter {
+      display: none;
     }
   }
+}
 
 
+@media(max-width: 1230px) {
+  .main-container-product {
+    margin: 0 !important;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .left {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
 
 
+      &__product {
+        flex-direction: column;
 
 
+        &__slider {
+          width: 90% !important;
+          padding: 10px 5% !important;
+
+          .bx-wrapper {
+            min-width: 250px;
+          }
+
+          &--link {
+            min-width: 50px;
+          }
+        }
 
 
+      }
+
+      &__description {
+        width: 90% !important;
+        padding: 0 5% !important;
+        margin-top: 20px;
 
 
+        &__title {
+          &--text {
+            font-size: 30px !important;
+          }
+        }
 
+        &__sub-title {
+          &--price {
+            font-size: 30px !important;
+          }
+        }
+      }
 
+      .table__content__info--left {
+        border-right: 1px solid #ccc;
+      }
 
+    }
 
-
-
-
-
-
-
-    .right-side {
+    .right {
       width: 100% !important;
       margin: 10px !important;
       padding: 0 !important;
@@ -323,95 +354,5 @@
     }
 
 
-
-
-
-
-.main-container-product {
-  margin: 0 !important;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .left-side {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-
-
-
-    &__product-information{
-      flex-direction: column;
-
-
-
-
-
-      &__slider-container {
-        width: 90% !important;
-        padding: 10px 5% !important;
-
-        .bx-wrapper {
-          min-width: 250px;
-        }
-
-        #bx-pager a {
-          min-width: 50px;
-        }
-      }
-
-
-
-
-      &__product-description {
-        width: 90% !important;
-        padding: 0 5% !important;
-        margin-top: 20px;
-
-
-        h1 {
-          font-size: 30px !important;
-        }
-
-        &__price {
-          font-size: 40px !important;
-        }
-      }
-
-
-
-
-    }
-
-
-    .product-table__tab-content__product-infos__left-side-infos {
-      border-right: 1px solid #ccc;
-    }
-
   }
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -3,7 +3,9 @@
   display: flex;
   justify-content: center;
   margin: 0 13% 0 13%;}
-  .ads-div{
+
+
+  .side-bar{
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -14,12 +16,17 @@
       margin-top:20px;
       display: flex;
       flex-direction: column;
-      i{
-        width: 10px;
-        height: 10px;
-        color: white;
+      &__text{
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+
+        &--case{
+          text-transform: none;
+        }
+
       }
-      button{
+      &__button{
         display: flex;
         cursor: pointer;
         padding: 15px 4%;
@@ -31,18 +38,17 @@
         font-size: 15px;
         font-weight: bold;
 
-        p{
-          padding: 0;
-          margin: 0;
-          text-transform: uppercase;
 
-        }
         &:hover{
           transform:scale(1.05);
           transition: 0.5s;
           border: 1px solid #E1E1E1;
         }
-
+        &--img{
+          margin:0 7px;
+          height: 18px;
+          width: 18px;
+        }
         &:first-child{
           display: flex;
           align-items: center;
@@ -50,25 +56,21 @@
           width: 100%;
           background-color: #005474;
           color: white;
-          p{
-            text-transform: none;
-          }
-          img{
-            margin:0 7px;
-            height: 18px;
-            width: 18px;
-          }
 
+
+
+        }
+
+        &--subcategory{
+          background-color: darken(#F4F4F4, 3%)!important;
+          padding-left: 15% !important;
+          font-weight: normal !important;
+          font-size: 14px !important;
+          margin:0 3px  !important;
         }
       }
 
-      &__button__subcategory{
-        background-color: darken(#F4F4F4, 3%)!important;
-        padding-left: 15% !important;
-        font-weight: normal !important;
-        font-size: 14px !important;
-        margin:0 3px  !important;
-      }
+
 
 
 
@@ -80,7 +82,7 @@
       position: relative;
       display: inline-block;
 
-      p{
+    &__text{
         position: absolute;
         top: 50%;
         left: 50%;
@@ -100,7 +102,7 @@
           font-style: italic;
         }
       }
-      img{
+      &__img{
         width: 100%;
         height: auto;
       }
@@ -108,7 +110,7 @@
     }
 
 
-    &__button__blue{
+    &__button-blue{
       width:50%;
       height: 30px;
       border: none;
@@ -121,6 +123,9 @@
       min-width: 70px;
       word-wrap: break-word;
       cursor: pointer;
+
+      max-width: 200px;
+
       &:hover{
         transform:scale(1.05);
       }
@@ -135,7 +140,7 @@
       text-transform: uppercase;
       color: white;
       background-color: #005474;
-      input{
+      &__input{
         width: 100%;
         border: none;
         height: 30px;
@@ -152,13 +157,14 @@
       width: 80%;
       padding: 15px 10%;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 14px;
       text-transform: uppercase;
       color: white !important;
       background-color: #005474;
-      white-space: wrap;
 
-      input{
+
+
+      &__input{
         width: 100%;
         border: none;
         margin-bottom: 10px;
@@ -175,22 +181,22 @@
       display: flex;
       width: 100%;
       flex-direction: column;
-      img{
+      &__img {
         width: 200px;
-        max-width: 200px;
-        min-width: 100px;
         height: 200px;
       }
-      h5{
+
+      &__title {
         font-size: 20px;
         margin: 0;
       }
-      div{
+
+      &__img-wrap {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin:0 auto;
+        margin: 0 auto;
       }
 
     }

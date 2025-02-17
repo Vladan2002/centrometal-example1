@@ -247,11 +247,12 @@
       &:hover {
         transform: scale(1.05);
       }
+      &--yellow {
+        border: 3px solid #E59D01;
+      }
     }
 
-    &__button.yellow {
-      border: 3px solid #E59D01;
-    }
+
   }
 
   &__shape {
@@ -263,17 +264,21 @@
 
 
     &__trapez {
-      position: relative;
+
       border-bottom: 40px solid #01AEEE;
+
+
+      position: relative;
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
       height: 0;
       width: 100%;
       transform: rotate(180deg);
-
       margin: 20px 0px 20px 40px;
 
 
+      &--dark{border-bottom: 40px solid #015575 !important;}
+      &--yellow{border-bottom: 40px solid #E59D01 !important;}
 
     }
 
@@ -286,7 +291,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, 50%) rotate(180deg);
-      color: #ffffff;
+      color: white;
       text-transform: uppercase;
 
 
@@ -294,15 +299,7 @@
   }
 
 
-  .trapez-darkblue {
-    border-bottom: 40px solid #015575 !important;
 
-  }
-
-  .trapez-yellow {
-    border-bottom: 40px solid #E59D01 !important;
-
-  }
 
 
 
