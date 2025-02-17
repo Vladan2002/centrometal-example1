@@ -82,7 +82,7 @@
 
         &--controls{
           border: none;
-          font-size: 20px;
+          font-size: 1.5rem;
 
 
           &:hover{
@@ -118,13 +118,13 @@
       &__sub-title{
         display: flex;
         &--text{
-          font-size: 30px;
+          font-size: 2rem;
           color:#0BA2D6;
           padding-left: 20px;
 
         }
         &--price{
-          font-size:50px;
+          font-size:3rem;
           font-weight:bold;
           padding-left: 0;
           color:#0BA2D6;
@@ -165,7 +165,7 @@
           text-align: center;
           border: 1px solid #ccc;
           padding: 5px;
-          font-size: 14px;
+          font-size: 1rem;
           margin-right: 0px !important;
           background-color: #f9f9f9;
         }
@@ -174,7 +174,7 @@
           background-color: #f9f9f9;
           padding: 5px;
           cursor: pointer;
-          font-size: 14px;
+          font-size: 1rem;
         }
         &--plus{
           margin-left: 30px;
@@ -182,7 +182,7 @@
           background-color: red;
           color: white;
           padding: 4px 10px 4px 10px;
-          font-size: 20px;
+          font-size: 1rem;
 
         }
 
@@ -248,7 +248,7 @@
 
 
       width: 100%;
-      font-size: 20px;
+      font-size: 1.5rem;
 
       &__text{
         white-space: nowrap;

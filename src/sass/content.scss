@@ -59,7 +59,7 @@
       padding: 0 20px;
 
       &__title{
-        font-size:50px;
+        font-size:3rem;
         font-weight: bold;
         margin-bottom:20px;
         &:first-of-type{
@@ -168,7 +168,7 @@
 
           &__old {
             text-decoration: line-through;
-            font-size: 17px;
+            font-size: 1rem;
             color: gray;
             margin-right: 10px;
 
@@ -177,7 +177,7 @@
 
           &__new{
             font-weight: bold;
-            font-size: 18px;
+            font-size: 1.2rem;
             color: #01AEEE;
           }
         }
@@ -187,7 +187,7 @@
         &__product-name {
           margin: 5px 0;
           font-weight: bold;
-          font-size: 18px;
+          font-size: 1rem;
         }
         &__img {
           width: 150px;
@@ -199,7 +199,7 @@
           right: -2px;
           background-color: #E59D01;
           color: white;
-          font-size: 12px;
+          font-size: 0.8rem;
           font-weight: bold;
           padding: 10px 5px;
           border-radius: 50%;
@@ -238,7 +238,7 @@
       padding: 10px 5%;
       background-color: transparent;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 1rem;
       border: 3px solid #01AEEE;
       text-transform: uppercase;
       color: #015575;
@@ -284,7 +284,7 @@
 
     &__text {
       white-space: nowrap;
-      font-size: 18px;
+      font-size: 1rem;
       padding: 0;
       margin: 0;
       position: absolute;
@@ -310,7 +310,7 @@
     width: 80%;
     padding: 15px 10%;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
     color: white;
     background-color: #005474;
@@ -333,7 +333,7 @@
     width: 80%;
     padding: 15px 10%;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
     color: white !important;
     background-color: #005474;
@@ -367,7 +367,7 @@
     }
 
     &__title {
-      font-size: 20px;
+      font-size: 1rem;
       margin: 0;
     }
 

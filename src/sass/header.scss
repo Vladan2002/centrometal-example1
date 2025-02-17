@@ -42,7 +42,7 @@
         align-items: center;
         width: 42%;
 
-        font-size: 40px;
+        font-size: 2.5rem;
         font-stretch: ultra-expanded;
 
         &--logo {
@@ -76,6 +76,7 @@
           .magnify {
             margin-left: -50px;
             color: #0BA2D6;
+
           }
 
         }
@@ -91,7 +92,7 @@
 
 
         &--link {
-          font-size: 18px;
+          font-size: 1.5rem;
           color: #333;
           text-decoration: none;
           border: 3px solid #0BA2D6;
@@ -143,7 +144,7 @@
             margin-right: 3px;
             color: #0BA2D6;
             border: 0;
-            font-size: 14px;
+            font-size: 0.8rem;
           }
 
 
@@ -188,7 +189,7 @@
         }
 
         &:last-child {
-          padding: 3px 13px 12px 13px;
+          padding: 1px 13px 12px 13px;
           text-align: start;
           cursor: auto;
 
@@ -206,7 +207,7 @@
       &--text{
         padding: 0;
         margin: 0;
-        font-size: 14px;
+        font-size: 1rem;
         &:first-child {
           color: rgba(0, 0, 0, 0.5);
         }
@@ -241,7 +242,7 @@
 
   &__burger-menu {
     display: none;
-    font-size: 24px;
+    font-size: 2rem;
     color: white;
     cursor: pointer;
 
