@@ -61,7 +61,7 @@
           height: auto;
           border: 1px solid #CCCCCC;
           padding: 5px;
-          &__active{
+          &--active{
             border: 2px solid red;
 
           }
@@ -299,13 +299,13 @@
 
       }
 
-      &__active {
+      &--active {
         background: #3498db;
       }
     }
 
 
-    &__active {
+    &--active {
       display: block !important;
     }
 

@@ -261,7 +261,7 @@ body {
     border-bottom: 1px solid #009AD9;
     width: 100%;
   }
-  .navbar__small__select.active {
+  .navbar__small__select--active {
     display: flex !important;
   }
   .navbar__trapezoid-left, .navbar__trapezoid-right {
@@ -1322,7 +1322,7 @@ body {
   border: 1px solid #CCCCCC;
   padding: 5px;
 }
-.main__left__product__slider__link__active {
+.main__left__product__slider__link--active {
   border: 2px solid red;
 }
 .main__left__product__slider__img {
@@ -1504,10 +1504,10 @@ body {
   transition: background 0.3s;
   border-right: 1px solid white;
 }
-.main__table__tabs__active {
+.main__table__tabs--active {
   background: #3498db;
 }
-.main__table__active {
+.main__table--active {
   display: block !important;
 }
 .main__table__content {

@@ -44,7 +44,7 @@ function progress(value){
 
 function toggleMenu() {
     var menu = document.getElementById("select-menu");
-    menu.classList.toggle("active");
+    menu.classList.toggle("navbar__small__select--active");
 }
 
 
@@ -73,18 +73,18 @@ function openTab(event, tabName) {
     // Hide all tab content
     tabContent = document.getElementsByClassName("main__table__content");
     for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].classList.remove("main__table__active"); // Hide all tabs
+        tabContent[i].classList.remove("main__table--active"); // Hide all tabs
     }
 
     // Remove active state from all buttons
     tabButtons = document.getElementsByClassName("main__table__tabs__button");
     for (i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("main__table__tabs__active");
+        tabButtons[i].classList.remove("main__table__tabs--active");
     }
 
     // Show the selected tab
-    document.getElementById(tabName).classList.add("main__table__active");
-    event.currentTarget.classList.add("main__table__tabs__active");
+    document.getElementById(tabName).classList.add("main__table--active");
+    event.currentTarget.classList.add("main__table__tabs--active");
 }
 
 
@@ -141,8 +141,8 @@ $(document).ready(function(){
     });
 
     $('.main__left__product__slider__link').on('click', function(){
-        $('.main__left__product__slider__link').removeClass('main__left__product__slider__link__active');
-        $(this).addClass('main__left__product__slider__link__active');
+        $('.main__left__product__slider__link').removeClass('main__left__product__slider__link--active');
+        $(this).addClass('main__left__product__slider__link--active');
     });
 });
 

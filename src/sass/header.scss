@@ -338,11 +338,13 @@
           width: 100%;
 
         }
+
+        &--active {
+          display: flex !important;
+        }
       }
 
-      &__select.active {
-        display: flex !important;
-      }
+
     }
 
     &__trapezoid-left, &__trapezoid-right {
