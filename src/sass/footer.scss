@@ -53,3 +53,34 @@
     }
   }
 }
+
+@media (max-width: 1230px) {
+  .bottom-container {
+
+    &__copyright {
+      width: 100% !important;
+      padding: 10px 0 !important;
+
+      &__text {
+        margin-left: 50px !important;
+      }
+    }
+
+
+    &__footer {
+      width: 100% !important;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: column;
+
+
+      &__content {
+        width: 80% !important;
+        padding-left: 50px !important;
+        border: none !important;
+
+
+      }
+    }
+  }
+}

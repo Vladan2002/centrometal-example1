@@ -27,24 +27,24 @@
     <header class="navbar__header">
         <div class="navbar__header__container">
             <div class="navbar__header__left">
-                <div class="navbar__header__left--logo">
-                    <span class="navbar__header__left--text">CENTRO</span><span class="navbar__header__left--text">METAL</span>
+                <div class="navbar__header__left__logo">
+                    <span class="navbar__header__left__text">CENTRO</span><span class="navbar__header__left__text">METAL</span>
                 </div>
 
 
             </div>
             <div class="navbar__header__right">
-                <div class="navbar__header__right--search">
-                    <input class="navbar__header__right--input" type="text" placeholder="Unesi šifru ili pojam pretraživanja">
-                    <i class="fa-solid fa-magnifying-glass magnify"></i>
+                <div class="navbar__header__right__search">
+                    <input class="navbar__header__right__input" type="text" placeholder="Unesi šifru ili pojam pretraživanja">
+                    <i class="fa-solid fa-magnifying-glass navbar__header__right__search__magnify"></i>
                 </div>
                 <div class="navbar__header__right__buy">
-                    <a class="navbar__header__right--link" href="#"><i class="fa-brands fa-facebook-f facebook-mod"></i></a>
-                    <a class="navbar__header__right--link moja-korpa" href="#" >MOJA KORPA</a>
-                    <p class="navbar__header__right--text">0.00$</p>
-                    <a class="navbar__header__right--link" href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping navbar__header__right--icon"></i></a>
+                    <a class="navbar__header__right__link" href="#"><i class="fa-brands fa-facebook-f navbar__header__right__buy__icon"></i></a>
+                    <a class="navbar__header__right__link navbar__header__right__buy__basket" href="#" >MOJA KORPA</a>
+                    <p class="navbar__header__right__text">0.00$</p>
+                    <a class="navbar__header__right__link" href="#" style="background-color:#0BA2D6;"><i class="fa-solid fa-cart-shopping navbar__header__right__icon"></i></a>
                     <div class="navbar__burger-menu" onclick="toggleMenu()">
-                        <i class="fa-solid fa-bars navbar__burger-menu--icon"></i>
+                        <i class="fa-solid fa-bars navbar__burger-menu__icon"></i>
                     </div>
                 </div>
             </div>
@@ -57,18 +57,18 @@
 
 
         <div class="navbar__small__select" id="select-menu">
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)"><i class="fa-solid fa-house navbar__small__select--icon"></i></a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Akcija</a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Rasprodaja</a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Katalozi</a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Novosti</a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">O nama</a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Uradi sam</a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Vip kartica</a>
-            <a class="navbar__small__select--button" href="#" onclick="navbar(this)">Kontakt</a>
-            <a class="navbar__small__select--button" href="#">
-                <p class="navbar__small__select--text">Informacije</p>
-                <p class="navbar__header__right--text">tel: 020 123 456</p>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)"><i class="fa-solid fa-house navbar__small__select__icon"></i></a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">Akcija</a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">Rasprodaja</a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">Katalozi</a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">Novosti</a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">O nama</a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">Uradi sam</a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">Vip kartica</a>
+            <a class="navbar__small__select__button" href="#" onclick="navbar(this)">Kontakt</a>
+            <a class="navbar__small__select__button" href="#">
+                <p class="navbar__small__select__text">Informacije</p>
+                <p class="navbar__header__right__text">tel: 020 123 456</p>
             </a>
         </div>
 
@@ -79,10 +79,10 @@
 <div class="page-navigation">
 <span class="page-navigation__text">Naslovna /</span><span class="page-navigation__text">Proizvodi /</span><span class="page-navigation__text">grupa robe</span>
 </div>
-<div class="main-container-product">
-    <div class="left">
-        <div class="left__product">
-        <div class="left__product__slider">
+<div class="main">
+    <div class="main__left">
+        <div class="main__left__product">
+        <div class="main__left__product__slider">
             <ul class="bxslider">
                 <li><img src="src/assets/masina2.jpg"></li>
                 <li><img src="src/assets/masina1.jpg"></li>
@@ -90,69 +90,69 @@
                 <li><img src="src/assets/masina4.jpg"></li>
             </ul>
 
-            <div class="left__product__slider--pager">
-                <button class="left__product__slider--controls" id="prev-slide">❮</button>
+            <div class="main__left__product__slider__pager">
+                <button class="main__left__product__slider__controls" id="prev-slide">❮</button>
 
-                <div id="bx-pager" class="left__product__slider--thumbnail">
-                <a class="left__product__slider--link" data-slide-index="0" href=""><img class="left__product__slider--img" src="src/assets/masina2.jpg"></a>
-                <a class="left__product__slider--link" data-slide-index="1" href=""><img class="left__product__slider--img" src="src/assets/masina1.jpg"></a>
-                <a class="left__product__slider--link" data-slide-index="2" href=""><img class="left__product__slider--img" src="src/assets/masina3.jpg"></a>
-                <a class="left__product__slider--link" data-slide-index="3" href=""><img class="left__product__slider--img" src="src/assets/masina4.jpg"></a>
+                <div id="bx-pager" class="main__left__product__slider__thumbnail">
+                <a class="main__left__product__slider__link main__left__product__slider__link__active " data-slide-index="0" href=""><img class="main__left__product__slider__img" src="src/assets/masina2.jpg"></a>
+                <a class="main__left__product__slider__link" data-slide-index="1" href=""><img class="main__left__product__slider__img" src="src/assets/masina1.jpg"></a>
+                <a class="main__left__product__slider__link" data-slide-index="2" href=""><img class="main__left__product__slider__img" src="src/assets/masina3.jpg"></a>
+                <a class="main__left__product__slider__link" data-slide-index="3" href=""><img class="main__left__product__slider__img" src="src/assets/masina4.jpg"></a>
                 </div>
-                <button class="left__product__slider--controls" id="next-slide">❯</button>
+                <button class="main__left__product__slider__controls" id="next-slide">❯</button>
 
             </div>
         </div>
-        <div class="left__description">
-            <div class="left__description__title">
-            <h1 class="left__description__title--text">Gorenje WD 95140 Mašina za pranje u sušenje</h1>
-            <div class="left__description__sub-title"> <div class="left__description__sub-div">   <span class="left__description__sub-title--price">554$</span></div> <div class="left__description__sub-div"> <span class="left__description__sub-title--text">123 456 789</span> <p class="left__description__sub-title--code">Šifra artikla</p> </div> </div>
+        <div class="main__left__description">
+            <div class="main__left__description__title">
+            <h1 class="main__left__description__title__text">Gorenje WD 95140 Mašina za pranje u sušenje</h1>
+            <div class="main__left__description__sub-title"> <div class="main__left__description__sub-div">   <span class="main__left__description__sub-title__price">554$</span></div> <div class="main__left__description__sub-div"> <span class="main__left__description__sub-title__text">123 456 789</span> <p class="main__left__description__sub-title__code">Šifra artikla</p> </div> </div>
             </div>
 
-            <div class="left__description__info">
-                <p class="left__description__info--text">Šifra artikla: 7248</p>
-                <p class="left__description__info--text">Broj okretanja centrifuge: 1400,00 okr/min</p>
-                <p class="left__description__info--text">Elektronsko upravljanje: DA</p>
-                <p class="left__description__info--text">Samostojeći: DA</p>
-                <p class="left__description__info--text">Punjenje sprijeda: DA</p>
-                <p class="left__description__info--text">Kapacitet pranja: 9kg</p>
-                <p class="left__description__info--text">Kapacitet sušenja: 7kg</p>
-                <p class="left__description__info--text">Kapacitet nečega: 7kg</p>
+            <div class="main__left__description__info">
+                <p class="main__left__description__info__text">Šifra artikla: 7248</p>
+                <p class="main__left__description__info__text">Broj okretanja centrifuge: 1400,00 okr/min</p>
+                <p class="main__left__description__info__text">Elektronsko upravljanje: DA</p>
+                <p class="main__left__description__info__text">Samostojeći: DA</p>
+                <p class="main__left__description__info__text">Punjenje sprijeda: DA</p>
+                <p class="main__left__description__info__text">Kapacitet pranja: 9kg</p>
+                <p class="main__left__description__info__text">Kapacitet sušenja: 7kg</p>
+                <p class="main__left__description__info__text">Kapacitet nečega: 7kg</p>
             </div>
-            <div class="left__description__social">
-                <p class="left__description__social--text">Količina: </p>
-                <input class="left__description__social--input" type="text"  id="quantity" value="1" readonly>
-                <button class="left__description__social--button" onclick="decreaseQuantity()">-</button>
-                <button class="left__description__social--button" onclick="increaseQuantity()">+</button>
-                <span class="left__description__social--plus">+</span>
-                <p class="left__description__social--text">Share:</p>
-                <a href="" class="left__description__social--link"><i class="fa-brands fa-facebook-f left__description__social--icon"></i></a>
-                <a href="" class="left__description__social--link"> <i class="fa-brands fa-twitter left__description__social--icon"></i></a>
-                <a href="" class="left__description__social--link"><i class="fa-regular fa-envelope left__description__social--icon"></i></a>
-                <a href="" class="left__description__social--link"><i class="fa-brands fa-google-plus-g left__description__social--icon"></i></a>
+            <div class="main__left__description__social">
+                <p class="main__left__description__text">Količina: </p>
+                <input class="main__left__description__input" type="text"  id="quantity" value="1" readonly>
+                <button class="main__left__description__button" onclick="decreaseQuantity()">-</button>
+                <button class="main__left__description__button" onclick="increaseQuantity()">+</button>
+                <span class="main__left__description__plus">+</span>
+                <p class="main__left__description__text">Share:</p>
+                <a href="" class="main__left__description__link"><i class="fa-brands fa-facebook-f main__left__description__icon main__left__description__link--icon-facebook "></i></a>
+                <a href="" class="main__left__description__link"> <i class="fa-brands fa-twitter main__left__description__icon  main__left__description__link--icon-twitter"></i></a>
+                <a href="" class="main__left__description__link"><i class="fa-regular fa-envelope main__left__description__icon main__left__description__link--icon-envelope "></i></a>
+                <a href="" class="main__left__description__link"><i class="fa-brands fa-google-plus-g main__left__description__icon  main__left__description__link--icon-gugl"></i></a>
             </div>
 
             <div>
-                <button class="left__description__button"><i class="fa-solid fa-cart-shopping left__description__button--icon"></i>Dodaj u korpu</button>
-                <button class="left__description__button">Provjeri korpu</button>
+                <button class="main__left__button"><i class="fa-solid fa-cart-shopping main__left__button__icon"></i>Dodaj u korpu</button>
+                <button class="main__left__button">Provjeri korpu</button>
             </div>
         </div>
 
     </div>
 
-        <div class="table">
+        <div class="main__table">
 
-            <div class="table__tabs">
-                <button class="table__tabs__button active" onclick="openTab(event, 'proizvod')">PROIZVODNA LISTA</button>
-                <button class="table__tabs__button" onclick="openTab(event, 'uputstvo')">UPUTSTVO ZA RUKOVANJE</button>
-                <button class="table__tabs__button" onclick="openTab(event, 'ocjena')">OCJENA</button>
-                <button class="table__tabs__button" onclick="openTab(event, 'email')">E-MAIL</button>
+            <div class="main__table__tabs">
+                <button class="main__table__tabs__button main__table__tabs__active" onclick="openTab(event, 'proizvod')">PROIZVODNA LISTA</button>
+                <button class="main__table__tabs__button" onclick="openTab(event, 'uputstvo')">UPUTSTVO ZA RUKOVANJE</button>
+                <button class="main__table__tabs__button" onclick="openTab(event, 'ocjena')">OCJENA</button>
+                <button class="main__table__tabs__button" onclick="openTab(event, 'email')">E-MAIL</button>
             </div>
 
-            <div id="proizvod" class="table__content active">
-                <div class="table__content__info">
+            <div id="proizvod" class="main__table__content main__table__active">
+                <div class="main__table__content__info">
 
-                    <div class="table__content__info--left">
+                    <div class="main__table__content__info__left">
                     <div>Samostojeći: DA</div>
                     <div>Punjenje sprijeda: DA</div>
                     <div>Elektronsko upravljanje: DA</div>
@@ -166,7 +166,7 @@
                     <div>Senzorsko sušenje: DA</div>
 
                     </div>
-                    <div class="table__content__info--right">
+                    <div class="main__table__content__info__right">
                     <div>Odgoda početka rada: DA</div>
                     <div>Ručni program: DA</div>
                     <div>Brzi program: DA</div>
@@ -184,11 +184,11 @@
                 </div>
             </div>
 
-            <div id="uputstvo" class="table__content">
-                <button class="table__content--button"><a class="table__content--link" href="src/assets/upustvo.pdf">Upustvo</a></button>
+            <div id="uputstvo" class="main__table__content">
+                <button class="main__table__content__button"><a class="main__table__content__link" href="src/assets/upustvo.pdf">Upustvo</a></button>
             </div>
 
-            <div id="ocjena" class="table__content">
+            <div id="ocjena" class="main__table__content">
                 <p>Ocijenite ovaj proizvod</p>
                 <span class="fa fa-star" onclick="rateStar(1)"></span>
                 <span class="fa fa-star" onclick="rateStar(2)"></span>
@@ -197,12 +197,12 @@
                 <span class="fa fa-star" onclick="rateStar(5)"></span>
             </div>
 
-            <div id="email" class="table__content">
-                <div class="table__content--container">
+            <div id="email" class="main__table__content">
+                <div class="main__table__content__container">
 
-                    <input class="table__content--input" type="text" placeholder="E-mail adresa" >
-                    <input class="table__content--input" type="text" placeholder="Naslov" >
-                    <textarea class="table__content--textarea" placeholder="Unesi tekst"></textarea>
+                    <input class="main__table__content__input" type="text" placeholder="E-mail adresa" >
+                    <input class="main__table__content__input" type="text" placeholder="Naslov" >
+                    <textarea class="main__table__content__textarea" placeholder="Unesi tekst"></textarea>
                 </div>
 
 
@@ -217,87 +217,87 @@
 
 
         </div>
-        <div class="left__similar">
-            <span class="left__similar__text">Slicni proizvodi</span>
-            <div class="left__similar__line"></div>
+        <div class="main__left__similar">
+            <span class="main__left__similar__text">Slicni proizvodi</span>
+            <div class="main__left__similar__line"></div>
         </div>
-        <div class="products__discounts">
-            <div class="product-bar">
-                <div class="product-bar__card">
-                    <div class="product-bar__card__img-wrapper">
-                        <img src="src/assets/zasudje.png" alt="Product Image" class="product-bar__card__img">
-                        <div class="product-bar__card__badge">20%</div>
+        <div class="container__products__discounts">
+            <div class="container__products__bar">
+                <div class="container__products__bar__card">
+                    <div class="container__products__bar__img-wrapper">
+                        <img src="src/assets/zasudje.png" alt="Product Image" class="container__products__bar__img">
+                        <div class="container__products__bar__badge">20%</div>
                     </div>
-                    <h5 class="product-bar__card__product-name">Ugradni frižider</h5>
-                    <span class="product-bar__card__timer">10 dan 6 sat 15 min 10 sec</span>
-                    <div class="product-bar__card__price">
-                        <span class="product-bar__card__price__old">$150.00</span>
-                        <span class="product-bar__card__price__new">$90.00</span>
-                    </div>
-                </div>
-
-                <div class="product-bar__card">
-                    <div class="product-bar__card__img-wrapper">
-                        <img src="src/assets/sega.png" alt="Product Image" class="product-bar__card__img">
-                        <div class="product-bar__card__badge">30%</div>
-                    </div>
-                    <h5 class="product-bar__card__product-name">Ugradni frižider</h5>
-                    <span class="product-bar__card__timer">10 dan 6 sat 15 min 10 sec</span>
-                    <div class="product-bar__card__price">
-                        <span class="product-bar__card__price__old">$150.00</span>
-                        <span class="product-bar__card__price__new">$90.00</span>
+                    <h5 class="container__products__bar__name">Ugradni frižider</h5>
+                    <span class="container__products__bar__timer">10 dan 6 sat 15 min 10 sec</span>
+                    <div class="container__products__bar__price">
+                        <span class="container__products__bar__price container__products__bar__price--old">$150.00</span>
+                        <span class="container__products__bar__price container__products__bar__price--new">$90.00</span>
                     </div>
                 </div>
 
-                <div class="product-bar__card">
-                    <div class="product-bar__card__img-wrapper">
-                        <img src="src/assets/frizider.png" alt="Product Image" class="product-bar__card__img">
-                        <div class="product-bar__card__badge">40%</div>
+                <div class="container__products__bar__card">
+                    <div class="container__products__bar__img-wrapper">
+                        <img src="src/assets/sega.png" alt="Product Image" class="container__products__bar__img">
+                        <div class="container__products__bar__badge">30%</div>
                     </div>
-                    <h5 class="product-bar__card__product-name">Ugradni frižider</h5>
-                    <span class="product-bar__card__timer">10 dan 6 sat 15 min 10 sec</span>
-                    <div class="product-bar__card__price">
-                        <span class="product-bar__card__price__old">$150.00</span>
-                        <span class="product-bar__card__price__new">$90.00</span>
+                    <h5 class="container__products__bar__name">Ugradni frižider</h5>
+                    <span class="container__products__bar__timer">10 dan 6 sat 15 min 10 sec</span>
+                    <div class="container__products__bar__price">
+                        <span class="container__products__bar__price container__products__bar__price--old">$150.00</span>
+                        <span class="container__products__bar__price container__products__bar__price--new">$90.00</span>
                     </div>
                 </div>
 
-                <div class="product-bar__card">
-                    <div class="product-bar__card__img-wrapper">
-                        <img src="src/assets/sporet.png" alt="Product Image" class="product-bar__card__img">
-                        <div class="product-bar__card__badge">90%</div>
+                <div class="container__products__bar__card">
+                    <div class="container__products__bar__img-wrapper">
+                        <img src="src/assets/frizider.png" alt="Product Image" class="container__products__bar__img">
+                        <div class="container__products__bar__badge">40%</div>
                     </div>
-                    <h5 class="product-bar__card__product-name">Ugradni frižider</h5>
-                    <span class="product-bar__card__timer">10 dan 6 sat 15 min 10 sec</span>
-                    <div class="product-bar__card__price">
-                        <span class="product-bar__card__price__old">$150.00</span>
-                        <span class="product-bar__card__price__new">$90.00</span>
+                    <h5 class="container__products__bar__name">Ugradni frižider</h5>
+                    <span class="container__products__bar__timer">10 dan 6 sat 15 min 10 sec</span>
+                    <div class="container__products__bar__price">
+                        <span class="container__products__bar__price container__products__bar__price--old">$150.00</span>
+                        <span class="container__products__bar__price container__products__bar__price--new">$90.00</span>
+                    </div>
+                </div>
+
+                <div class="container__products__bar__card">
+                    <div class="container__products__bar__img-wrapper">
+                        <img src="src/assets/sporet.png" alt="Product Image" class="container__products__bar__img">
+                        <div class="container__products__bar__badge">90%</div>
+                    </div>
+                    <h5 class="container__products__bar__name">Ugradni frižider</h5>
+                    <span class="container__products__bar__timer">10 dan 6 sat 15 min 10 sec</span>
+                    <div class="container__products__bar__price">
+                        <span class="container__products__bar__price container__products__bar__price--old">$150.00</span>
+                        <span class="container__products__bar__price container__products__bar__price--new">$90.00</span>
                     </div>
                 </div>
             </div>
 
-            <button class="products__discounts__button">Pogledajte sve proizvode iz vruće ponude</button>
+            <button class="container__products__discounts__button">Pogledajte sve proizvode iz vruće ponude</button>
 
         </div>
 
     </div>
-    <div class="right" >
-        <video class="right__video" width="100%" height="auto" controls>
+    <div class="main__right" >
+        <video class="main__right__video" width="100%" height="auto" controls>
             <source src="src/assets/6982055-hd_1920_1080_30fps.mp4" type="video/mp4">
         </video>
-        <video  class="right__video" width="100%" height="auto" controls>
+        <video  class="main__right__video" width="100%" height="auto" controls>
             <source src="src/assets/6982055-hd_1920_1080_30fps.mp4" type="video/mp4">
         </video>
 
 
-        <div class="side-bar__newsletter  right__newsletter-product">
+        <div class="container__side__newsletter  main__right__newsletter-product">
             <p>
                 <i class="fa-solid fa-envelope"></i>
                 Prijavi se na newsletter
             </p>
-            <input class="side-bar__newsletter__input" type="text" placeholder="Ime i prezime">
-            <input class="side-bar__newsletter__input" type="text" placeholder="Email">
-            <button class="side-bar__button-blue">Prijavi se</button>
+            <input class="container__side__newsletter__input" type="text" placeholder="Ime i prezime">
+            <input class="container__side__newsletter__input" type="text" placeholder="Email">
+            <button class="container__side__button-blue">Prijavi se</button>
         </div>
     </div>
 

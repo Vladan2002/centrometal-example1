@@ -1,16 +1,16 @@
 function categories() {
     let buttons = document.querySelectorAll("#menu button");
     let control=0;
-    if(buttons[1].classList.contains("deactivate-button")) {
+    if(buttons[1].classList.contains("container__side__menu__button--deactivate-button")) {
         control=1;
     }
 
     for (let i = 1; i < buttons.length; i++) {
         if (control ===1) {
             if(buttons[i].hasAttribute("data-category")) {continue;}
-            buttons[i].classList.remove("deactivate-button");
+            buttons[i].classList.remove("container__side__menu__button--deactivate-button");
         } else {
-            buttons[i].classList.add("deactivate-button");
+            buttons[i].classList.add("container__side__menu__button--deactivate-button");
         }
     }
 }
@@ -18,18 +18,18 @@ function navbar(element) {
     let a = document.querySelectorAll("#select-menu a");
     console.log(a);
     for (let i = 0; i < a.length; i++) {
-        if (a[i].classList.contains("active")) {
-            a[i].classList.remove("active");
+        if (a[i].classList.contains("navbar__small__select__button--active")) {
+            a[i].classList.remove("navbar__small__select__button--active");
         }
     }
-    element.classList.add("active");
+    element.classList.add("navbar__small__select__button--active");
 
 }
 function toggleSubcategories(category) {
-    const subcategories = document.querySelectorAll(`.side-bar__menu__button--subcategory[data-category="${category}"]`);
+    const subcategories = document.querySelectorAll(`.container__side__menu__button--subcategory[data-category="${category}"]`);
 
     subcategories.forEach(sub => {
-    sub.classList.toggle('deactivate-button');
+    sub.classList.toggle('container__side__menu__button--deactivate-button');
 });
 }
 
@@ -70,28 +70,32 @@ function decreaseQuantity() {
 function openTab(event, tabName) {
     var i, tabContent, tabButtons;
 
-    tabContent = document.getElementsByClassName("table__content");
+    // Hide all tab content
+    tabContent = document.getElementsByClassName("main__table__content");
     for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].style.display = "none";
+        tabContent[i].classList.remove("main__table__active"); // Hide all tabs
     }
 
-    tabButtons = document.getElementsByClassName("table__tabs__button");
+    // Remove active state from all buttons
+    tabButtons = document.getElementsByClassName("main__table__tabs__button");
     for (i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("active");
+        tabButtons[i].classList.remove("main__table__tabs__active");
     }
 
-    document.getElementById(tabName).style.display = "block";
-    event.currentTarget.classList.add("active");
+    // Show the selected tab
+    document.getElementById(tabName).classList.add("main__table__active");
+    event.currentTarget.classList.add("main__table__tabs__active");
 }
+
 
 
 function rateStar(rating) {
     let stars = document.querySelectorAll(".fa-star");
     for (let i = 0; i < stars.length; i++) {
         if (i < rating) {
-            stars[i].classList.add("checked");
+            stars[i].classList.add("main__table__checked");
         } else {
-            stars[i].classList.remove("checked");
+            stars[i].classList.remove("main__table__checked");
         }
     }
     document.getElementById("rating-value").textContent = rating;
@@ -136,10 +140,9 @@ $(document).ready(function(){
         slider.goToNextSlide();
     });
 
-    // Aktivni thumbnail efekat
-    $('.left__product__slider--link').on('click', function(){
-        $('.left__product__slider--link').removeClass('active');
-        $(this).addClass('active');
+    $('.main__left__product__slider__link').on('click', function(){
+        $('.main__left__product__slider__link').removeClass('main__left__product__slider__link__active');
+        $(this).addClass('main__left__product__slider__link__active');
     });
 });
 
@@ -159,8 +162,8 @@ $(document).ready(function() {
 
     console.log("BX Slider initialized:", $slider);
 
-    var totalSlides = $(".slider .products__slide-show__slide").length;
-    var customPager = $('.products__slide-show__custom-pager');
+    var totalSlides = $(".slider .container__products__slide-show__slide").length;
+    var customPager = $('.container__products__slide-show__custom-pager');
 
     console.log("Total slides:", totalSlides);
 

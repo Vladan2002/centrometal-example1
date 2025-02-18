@@ -1,11 +1,11 @@
-.main-container{
+.container{
   width: 74%;
   display: flex;
   justify-content: center;
-  margin: 0 13% 0 13%;}
+  margin: 0 13% 0 13%;
 
 
-  .side-bar{
+  &__side{
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
         margin: 0;
         text-transform: uppercase;
 
-        &--case{
+        &__case{
           text-transform: none;
         }
 
@@ -44,7 +44,7 @@
           transition: 0.5s;
           border: 1px solid #E1E1E1;
         }
-        &--img{
+        &__img{
           margin:0 7px;
           height: 18px;
           width: 18px;
@@ -67,6 +67,10 @@
           font-weight: normal !important;
           font-size: 1rem !important;
           margin:0 3px  !important;
+        }
+
+        &--deactivate-button{
+          display: none !important;
         }
       }
 
@@ -145,7 +149,7 @@
         height: 30px;
         margin-top: 10px;
       }
-      i.magnify{
+      &__magnify{
         margin-left: -30px;
         color: #0BA2D6;
       }
@@ -211,11 +215,50 @@
 
 
   }
+}
 
 
 
-.deactivate-button{
-  display: none !important;
+
+
+
+
+
+@media(max-width: 1230px) {
+  .container__side {
+    width: 100%;
+
+    &__menu {
+      margin: 0 !important;
+
+      &__button {
+
+        &:hover {
+          transform: none !important;
+          border: none !important;
+
+          .container__side__menu__button__img {
+            transform: scale(1.20) !important;
+          }
+
+          .container__side__menu__text {
+            margin-left: 10px !important;
+            transform: scale(1.05) !important;
+          }
+        }
+
+      }
+    }
+
+    &__ad {
+      display: none;
+    }
+
+
+    &__makita-post, &__search-brand, &__newsletter {
+      display: none;
+    }
+  }
 }
 
 
