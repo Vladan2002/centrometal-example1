@@ -30,8 +30,6 @@
                 <div class="navbar__header__left__logo">
                     <span class="navbar__header__left__text">CENTRO</span><span class="navbar__header__left__text">METAL</span>
                 </div>
-
-
             </div>
             <div class="navbar__header__right">
                 <div class="navbar__header__right__search">
@@ -83,23 +81,20 @@
     <div class="main__left">
         <div class="main__left__product">
         <div class="main__left__product__slider">
-            <ul class="bxslider">
-                <li><img src="src/assets/masina2.jpg"></li>
-                <li><img src="src/assets/masina1.jpg"></li>
-                <li><img src="src/assets/masina3.jpg"></li>
-                <li><img src="src/assets/masina4.jpg"></li>
-            </ul>
+            <div class="main__left__product__container" id="voli-vas-voli">
+                <img class="main__left__product__slider__img" src="src/assets/masina2.jpg">
+                <img class="main__left__product__slider__img" src="src/assets/masina1.jpg">
+                <img class="main__left__product__slider__img" src="src/assets/masina3.jpg">
+                <img class="main__left__product__slider__img" src="src/assets/masina4.jpg">
+            </div>
 
             <div class="main__left__product__slider__pager">
-                <button class="main__left__product__slider__controls" id="prev-slide">❮</button>
+                <button class="main__left__product__slider__controls" id="prev-slide" onclick="downSlider()">❮</button>
 
-                <div id="bx-pager" class="main__left__product__slider__thumbnail">
-                <a class="main__left__product__slider__link main__left__product__slider__link--active " data-slide-index="0" href=""><img class="main__left__product__slider__img" src="src/assets/masina2.jpg"></a>
-                <a class="main__left__product__slider__link" data-slide-index="1" href=""><img class="main__left__product__slider__img" src="src/assets/masina1.jpg"></a>
-                <a class="main__left__product__slider__link" data-slide-index="2" href=""><img class="main__left__product__slider__img" src="src/assets/masina3.jpg"></a>
-                <a class="main__left__product__slider__link" data-slide-index="3" href=""><img class="main__left__product__slider__img" src="src/assets/masina4.jpg"></a>
+                <div id="bx-pager" class="main__left">
+
                 </div>
-                <button class="main__left__product__slider__controls" id="next-slide">❯</button>
+                <button class="main__left__product__slider__controls" id="next-slide" onclick="upSlider()" >❯</button>
 
             </div>
         </div>
@@ -304,16 +299,23 @@
 
 </div>
 
-    <div class="slider-two">
-        <ul id="slider2">
-            <li><img src="src/assets/gorenje.png" alt="Logo 1"></li>
-            <li><img src="src/assets/samsung.png" alt="Logo 2"></li>
-            <li><img src="src/assets/sony.png" alt="Logo 3"></li>
-            <li><img src="src/assets/pan.png" alt="Logo 3" style="margin-top: 20px"></li>
-            <li><img src="src/assets/panasonic.png" alt="Logo 3" style="margin-top: -30px"></li>
-
-        </ul>
+<div class="slider-brand">
+    <div class="slider-brand__box"></div>
+    <button class="slider-brand__controls slider-brand__controls--left" onclick="switchesSlide()"> < </button>
+    <div class="slider-brand__container" id="slider22-container">
+        <img class="slider-brand__img" src="src/assets/panasonic.png">
+        <img class="slider-brand__img" src="src/assets/gorenje.png">
+        <img class="slider-brand__img" src="src/assets/samsung.png">
+        <img class="slider-brand__img" src="src/assets/samsung.png">
+        <img class="slider-brand__img" src="src/assets/panasonic.png">
+        <img class="slider-brand__img" src="src/assets/panasonic.png">
+        <img class="slider-brand__img" src="src/assets/sony.png" alt="">
+        <img class="slider-brand__img" src="src/assets/hilti.jpg" alt="">
+        <img class="slider-brand__img" src="src/assets/sony.png" alt="">
     </div>
+    <div class="slider-brand__box"></div>
+    <button class="slider-brand__controls slider-brand__controls--right" onclick="switchSlide()"> > </button>
+</div>
 
 <div class="bottom-container">
     <div class="bottom-container__footer">

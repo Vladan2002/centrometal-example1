@@ -28,55 +28,48 @@
     &__product{
       display: flex;
 
-
-      &__slider{
-        width: 40%;
+      &__container{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        transition: transform 0.5s ease-in-out;
 
-        .bx-wrapper {
-          width: 90%;
-          border: 1px solid #CCCCCC;
-          padding: 10px;
-          box-shadow: none !important;
-          background: none !important;
-          justify-content: center;
-          align-items: center;
-          padding: 35% 0;
 
+
+
+      }
+      &__slider{
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        width: 40%;
+        min-height: 250px;
+
+        &__img{
+          max-width: 100%;
         }
 
 
-        &__thumbnail{
+        .main____left{
           display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
+
         }
         &__link{
 
           display: inline-block;
           width: 20%;
           height: auto;
-          border: 1px solid #CCCCCC;
+          border: 1px solid #eeeeee;
           padding: 5px;
           &--active{
-            border: 2px solid red;
+            border: 1px solid red;
 
           }
         }
-        &__img{
-          width: 100%;
-          height: auto;
-          cursor: pointer;
-        }
-
         &__pager{
-          margin-top: 10px;
           display: flex;
-          justify-content: space-around;
-          max-width: 300px;
+          margin:0 auto;
+          justify-content: center;
+          align-items: center;
+
         }
 
         &__controls{

@@ -16,7 +16,6 @@ function categories() {
 }
 function navbar(element) {
     let a = document.querySelectorAll("#select-menu a");
-    console.log(a);
     for (let i = 0; i < a.length; i++) {
         if (a[i].classList.contains("navbar__small__select__button--active")) {
             a[i].classList.remove("navbar__small__select__button--active");
@@ -35,12 +34,6 @@ function toggleSubcategories(category) {
 
 
 
-function progress(value){
-    console.log("value",value);
-    let div=document.getElementById("progress");
-    div.style.width=`${value}%`;
-
-}
 
 function toggleMenu() {
     var menu = document.getElementById("select-menu");
@@ -70,19 +63,16 @@ function decreaseQuantity() {
 function openTab(event, tabName) {
     var i, tabContent, tabButtons;
 
-    // Hide all tab content
     tabContent = document.getElementsByClassName("main__table__content");
     for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].classList.remove("main__table--active"); // Hide all tabs
+        tabContent[i].classList.remove("main__table--active");
     }
 
-    // Remove active state from all buttons
     tabButtons = document.getElementsByClassName("main__table__tabs__button");
     for (i = 0; i < tabButtons.length; i++) {
         tabButtons[i].classList.remove("main__table__tabs--active");
     }
 
-    // Show the selected tab
     document.getElementById(tabName).classList.add("main__table--active");
     event.currentTarget.classList.add("main__table__tabs--active");
 }
@@ -102,106 +92,260 @@ function rateStar(rating) {
 }
 
 
-$(document).ready(function () {
-    var $slider = $("#slider2").bxSlider({
-        pager: false,        // Disable bxSlider's pager
-        controls: true,      // Show prev/next controls
-        infiniteLoop: true,  // Enable infinite loop
-        touchEnabled: true,  // Enable touch swiping
-        auto: true,          // Enable auto-sliding
-        pause: 3000,         // Slide duration in milliseconds
-        minSlides: 1,        // Minimum number of logos visible
-        maxSlides: 5,        // Maximum number of logos visible
-        slideWidth: 230,     // Control logo size without stretching
-        moveSlides: 1,       // Move one slide at a time
-        autoHover: true,     // Pause on hover
-        shrinkItems: false,  // Prevent bxSlider from resizing images
-        responsive: true
-    });
-});
 
 
 
 
-$(document).ready(function(){
-    var slider = $('.bxslider').bxSlider({
-        pagerCustom: '#bx-pager',
-        controls: false, // Isključuje default strelice bxSlider-a
-        auto: false, // Automatska promena slika
-        pause: 3000,
-        adaptiveHeight: true
-    });
+if(window.location.pathname.includes("/product-page.html")) {
+    var link=document.getElementsByClassName("main__left__product__slider__link");
 
-    $('#prev-slide').click(function(){
-        slider.goToPrevSlide();
-    });
 
-    $('#next-slide').click(function(){
-        slider.goToNextSlide();
-    });
-
-    $('.main__left__product__slider__link').on('click', function(){
-        $('.main__left__product__slider__link').removeClass('main__left__product__slider__link--active');
-        $(this).addClass('main__left__product__slider__link--active');
-    });
-});
+    var slideTwo=0;
+    var slideImages=document.querySelectorAll(".main__left__product__slider img")
+    var slider2pager=document.getElementById("bx-pager");
+    pagerProductTwo();
 
 
 
-
-$(document).ready(function() {
-    console.log("Document is ready!");
-
-    var $slider = $("#slider1").bxSlider({
-        pager: false,  // Disable bxSlider's default pager
-        controls: false, // Enable prev/next controls
-        infiniteLoop: false, // Infinite loop enabled
-        touchEnabled: false, // Enable touch swiping
-        auto: false, // Disable auto-sliding
-    });
-
-    console.log("BX Slider initialized:", $slider);
-
-    var totalSlides = $(".slider .container__products__slide-show__slide").length;
-    var customPager = $('.container__products__slide-show__custom-pager');
-
-    console.log("Total slides:", totalSlides);
-
-    if (totalSlides > 0) {
-        let progressValue=100/totalSlides;
-        document.getElementById("progress").style.width = progressValue + "%";
-        for (var i = 0; i < totalSlides; i++) {
-
-            customPager.append('<li class="pager-item" onclick="progress(' + progressValue + ')">' + (i + 1) + '</li>');
-            progressValue+=100/totalSlides;
-
-        }
+}else{
+    var images = document.querySelectorAll(".container__products__slider__show img");
+    pagerIndex();
+    var page=document.getElementsByClassName("container__products__slider__pager__text");
+    var number = images.length;
+    var slide = 1;
+    var progress=100/number;
+    var bar=document.getElementById("progress");
 
 
-        $('.pager-item').eq(0).addClass('active-page');
+    var ad=document.getElementById("popup-container");
+    var ads=document.getElementById("popup");
 
-        $(document).on('click', '.pager-item', function() {
-            var index = $(this).index();
 
-            $slider.goToSlide(index);
+    setInterval(plusSlide,3000)
 
-            $('.pager-item').removeClass('active-page');
-            console.log("Active page removed from all pager items");
+    setInterval(showAds,30000)
 
-            $(this).addClass('active-page');
-            console.log("Active page class added to pager item at index:", index);
-        });
 
-        $slider.on('onSlideAfter', function(event, slick, currentSlide) {
-            console.log("onSlideAfter triggered. Current slide index:", currentSlide);
+}
 
-            $('.pager-item').removeClass('active-page');
-            console.log("Active page removed from all pager items");
 
-            $('.pager-item').eq(currentSlide).addClass('active-page');
-            console.log("Active page class added to pager item at index:", currentSlide);
-        });
-    } else {
-        console.log("No slides found!");
+
+
+
+
+
+function pagerIndex() {
+    var pager = document.getElementById("pager");
+    var number = images.length;
+    var content = '';
+
+    for (var i = 0; i < number; i++) {
+        content += "<p class='container__products__slider__pager__text'  onclick='links(" + (i + 1) + ")'>" + (i + 1) + "</p>";
     }
-});
+
+    pager.innerHTML = content;
+}
+
+
+function slider(prev=false) {
+    if (prev) {
+        if (slide === number) {
+            images[0].classList.remove("container__products__slider__show__img--active");
+            page[0].classList.remove("container__products__slider__pager__text--active");
+        } else {
+            images[slide].classList.remove("container__products__slider__show__img--active");
+            page[slide].classList.remove("container__products__slider__pager__text--active");
+        }
+    } else {
+        if (slide > 1) {
+            images[slide - 2].classList.remove("container__products__slider__show__img--active");
+            page[slide - 2].classList.remove("container__products__slider__pager__text--active");
+        } else {
+            images[number - 1].classList.remove("container__products__slider__show__img--active");
+            page[number - 1].classList.remove("container__products__slider__pager__text--active");
+        }
+    }
+    images[slide-1].classList.add("container__products__slider__show__img--active");
+    page[slide-1].classList.add("container__products__slider__pager__text--active");
+    bar.style.width = slide*progress + "%";
+
+}
+function plusSlide() {
+    slide = (slide % number) + 1;
+    slider();
+}
+
+
+function minusSlide() {
+    if (slide > 1) {
+        slide--;
+    } else {
+        slide = number;
+    }
+    slider(true);
+}
+
+function links(num) {
+
+    images[slide-1].classList.remove("container__products__slider__show__img--active");
+    page[slide-1].classList.remove( "container__products__slider__pager__text--active");
+    images[num-1].classList.add("container__products__slider__show__img--active");
+    page[num-1].classList.add("container__products__slider__pager__text--active");
+    bar.style.width = num*progress + "%";
+    slide=num;
+
+}
+
+
+
+
+
+
+var slideBrands = document.getElementById("slider22-container");
+var brands = Array.from(document.querySelectorAll(".slider-brand img"));
+
+
+
+function updateSliders() {
+    slideBrands.innerHTML = "";
+    brands.forEach(img => slideBrands.appendChild(img));
+}
+
+function switchesSlide() {
+
+    slideBrands.style.transition = "transform 0.5s ease-in-out";
+    slideBrands.style.transform = "translateX(-400px)";
+
+    setTimeout(() => {
+        brands.push(brands.shift());
+        updateSliders();
+
+        slideBrands.style.transition = "none";
+        slideBrands.style.transform = "translateX(-200px)";
+
+    }, 500);
+
+}
+
+function switchSlide() {
+
+    slideBrands.style.transition = "transform 0.5s ease-in-out";
+    slideBrands.style.transform = "translateX(400px)";
+
+    setTimeout(() => {
+        brands.unshift(brands.pop());
+        updateSliders();
+
+        slideBrands.style.transition = "none";
+        slideBrands.style.transform = "translateX(200px)";
+
+    }, 800);
+}
+
+
+function showAds(){
+    var number=Math.floor(Math.random()*2);
+    if(number===0){
+        ad.innerHTML="";
+        ad.innerHTML='<img class="container__side__ad__img" src="src/assets/cipele.jpg" alt="">\n' +
+            '        <p class="container__side__ad__text">Fashion cipele</p>\n' +
+            '        <p class="container__side__ad__text">Veneno</p>\n' +
+            '        <button class="overlay__close" onclick="closePopup()">Zatvori</button>';
+    }
+    else{
+        ad.innerHTML="";
+        ad.innerHTML= '<img class="container__side__ad__img" src="src/assets/rostilj.jpg" alt="">\n' +
+            '        <p class="container__side__ad__text">Fashion cipele</p>\n' +
+            '        <p class="container__side__ad__text">Veneno</p>\n' +
+            '        <button class="overlay__close" onclick="closePopup()">Zatvori</button>';
+    }
+
+    ads.style.display='flex';
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+
+
+function pagerProductTwo() {
+    for (let i = 0; i < slideImages.length; i++) {
+        var a = document.createElement("a");
+        a.href = "#";
+        a.classList.add("main__left__product__slider__link");
+        if(i===0){a.classList.add("main__left__product__slider__link--active");
+        }
+        a.onclick = (function (index) {
+            return function () {
+                pagerProduct(index);
+            };
+        })(i);
+
+        var imgClone = slideImages[i].cloneNode(true);
+        a.appendChild(imgClone);
+        slider2pager.appendChild(a);
+    }
+}
+
+
+function upSlider() {
+
+
+    slideTwo++;
+
+    if(slideTwo === slideImages.length) {
+        link[slideImages.length-1].classList.remove("main__left__product__slider__link--active");
+        slideTwo=0;
+        link[slideTwo].classList.add("main__left__product__slider__link--active");
+
+    }else{
+        link[slideTwo].classList.add("main__left__product__slider__link--active");
+        if(slideTwo>=1){link[slideTwo-1].classList.remove("main__left__product__slider__link--active");}
+
+
+    }
+
+    let offset = -slideTwo * 100;
+    document.getElementById('voli-vas-voli').style.transform = `translateX(${offset}%)`;
+
+
+
+}
+function downSlider() {
+    slideTwo--;
+
+    if (slideTwo === -1) {
+        link[0].classList.remove("main__left__product__slider__link--active");
+        slideTwo = slideImages.length - 1;
+        link[slideTwo].classList.add("main__left__product__slider__link--active");
+    } else {
+        link[slideTwo].classList.add("main__left__product__slider__link--active");
+        if (slideTwo < slideImages.length - 1) {
+            link[slideTwo + 1].classList.remove("main__left__product__slider__link--active");
+        }
+    }
+
+    let offset = -slideTwo * 100;
+    document.getElementById('voli-vas-voli').style.transform = `translateX(${offset}%)`;
+}
+
+
+var previous=0;
+function pagerProduct(input){
+
+    if(previous!==-2){
+        link[previous].classList.remove("main__left__product__slider__link--active");
+    }
+    link[input].classList.add("main__left__product__slider__link--active");
+    previous=input;
+
+    slideTwo=input-1;
+    upSlider()
+
+}
+
+
+setInterval(switchSlide, 2000);
+
+

@@ -7,6 +7,91 @@
   align-items: center;
 
 
+  &__slider {
+    width: 100%;
+    padding:0 50px;
+
+
+    &__show{
+      position: relative;
+      overflow: hidden;
+      margin: auto;
+      min-height: 250px;
+      padding: 20px 40px;
+
+      &__slides {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      &__img {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+
+        &--active {
+          opacity: 1;
+        }
+      }
+
+
+
+      &__controls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        color: white;
+        border: none;
+        padding: 10px 12px;
+        cursor: pointer;
+        font-size: 15px;
+
+        &--previous {
+          left: 50px;
+        }
+
+        &--next {
+          right: 10px;
+        }
+      }
+
+
+
+
+
+
+
+    }
+
+    &__pager {
+      position: relative;
+      text-align: end;
+      bottom: -235px;
+      z-index: 3;
+      width: 100%;
+      padding: 0 40px !important;
+
+      &__text {
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 5px 10px;
+
+        &:hover {
+          background-color: #eee;
+        }
+
+        &--active {
+          background-color: red;
+        }
+      }
+    }
+  }
 
   &__slide-show {
     position: relative;
@@ -424,43 +509,7 @@
       justify-content: center;
       align-items: center;
 
-      &__slide-show {
-        padding: 0 !important;
 
-        &__progress-container {
-          margin: 0 20px !important;
-        }
-
-        &__custom-pager {
-          right: 60px !important;
-        }
-
-
-        &__block {
-          left: 10px !important;
-          top: 10px !important;
-          bottom: 60% !important;
-          height: auto !important;
-          width: auto !important;
-          min-width: auto !important;
-          padding: 20px 10px !important;
-
-
-        }
-        &__title {
-          font-size: 1.5rem !important;
-          margin-bottom: 10px;
-
-          &:first-of-type {
-            font-weight: normal;
-          }
-        }
-
-        &__button {
-          padding: 5px 15px !important;
-        }
-
-      }
 
       &__shape {
         &__trapez {
@@ -495,6 +544,10 @@
         margin-top: 10px;
 
       }
+
+
+
+
     }
 
   }
@@ -524,7 +577,145 @@
 
 
 }
+.progress-container {
+  position: relative;
+  width: calc(100% - 40px);
+  height: 3px;
+  margin: 0 40px!important;
+
+  .progress-bg {
+    width: 100%;
+    height: 3px;
+    background-color: gray;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .progress {
+    width: 25%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    z-index: 2;
+    transition: width 0.3s ease-in-out;
+  }
+}
 
 
 
 
+
+.slider-brand {
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  position: relative;
+
+  &__controls{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 400;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    width: max-content;
+  }
+
+  &__img {
+    max-width: 200px;
+    flex-shrink: 0;
+
+  }
+
+  &__box {
+    position: absolute;
+    width: 63px;
+    height: 204px;
+    background-color: white; // Bela boja
+    z-index: 2; // Kocka će biti ispred slika
+
+    &:first-of-type {
+      left: 0; // Leva kocka
+    }
+
+    &:last-of-type {
+      right: 0; // Desna kocka
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000;
+
+
+  &__popup {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+  }
+
+
+  &__close {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+
+
+    &:hover {
+      background: darkred;
+    }
+  }
+}

@@ -9,6 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 
+    <style>
+    </style>
 
 
 </head>
@@ -249,26 +251,37 @@
 
 
     <div class="container__products">
-        <div class="container__products__slide-show">
-            <ul class="slider" id="slider1">
-                <li class="container__products__slide-show__slide">
-                    <div class="container__products__slide-show__image-overlay"><img class="container__products__slide-show__img" src="src/assets/hilti.jpg" alt="Image 1">
-                        <div class="container__products__slide-show__block"> <span class="container__products__slide-show__title">Motorna</span>
-                    <span class="container__products__slide-show__title">Šega</span>
-                    <button class="container__products__slide-show__button"> proizvod </button></div>
-                    </div></li>
-                <li class="container__products__slide-show__slide"><img class ="container__products__slide-show__img" src="src/assets/suma.jpg" alt="Image 2" ></li>
-                <li class="container__products__slide-show__slide"><img class ="container__products__slide-show__img" src="src/assets/suma.jpg" alt="Image 3" ></li>
-                <li class="container__products__slide-show__slide"><img class ="container__products__slide-show__img" src="src/assets/suma.jpg" alt="Image 4" ></li>
+        <div class="container__products__slider">
+            <div class="container__products__slider__show">
+                <div class="container__products__slider__show__slides">
+                    <img class="container__products__slider__show__img container__products__slider__show__img--active" src="src/assets/sony.png" alt="">
+                </div>
+                <div class="container__products__slider__show__slides">
+                    <img class="container__products__slider__show__img" src="https://picsum.photos/id/23/900/200" alt="">
+                </div>
+                <div class="container__products__slider__show__slides">
+                    <img class="container__products__slider__show__img" src="https://picsum.photos/id/24/900/200" alt="">
+                </div>
+                <div class="container__products__slider__show__slides">
+                    <img class="container__products__slider__show__img" src="https://picsum.photos/id/25/900/200" alt="">
+                </div>
+                <div class="container__products__slider__show__slides">
+                    <img class="container__products__slider__show__img" src="src/assets/sony.png" alt="">
+                </div>
+                <div class="container__products__slider__show__slides">
+                    <img class="container__products__slider__show__img" src="https://picsum.photos/id/26/900/200" alt="">
+                </div>
 
-            </ul>
-            <div class="container__products__slide-show__custom-pager"></div>
-            <div class="container__products__slide-show__progress-container">
-                <div class="container__products__slide-show__background"></div>
-                <div class="container__products__slide-show__bar" id="progress"></div>
+                <button class="container__products__slider__show__controls container__products__slider__show__controls--previous" onclick="minusSlide()" id="prev"><</button>
+                <button class="container__products__slider__show__controls container__products__slider__show__controls--next" onclick="plusSlide()" id="next">></button>
+
+                <div class="container__products__slider__pager" id="pager"></div>
+            </div>
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="progress-bg"></div>
             </div>
         </div>
-
 
         <div class="container__products__shape">
 
@@ -702,7 +715,7 @@
                     </div>
                 </div>
             </div>
-            <button class="container__products__discounts__button container__products__discounts__button--yellow ">Pogledajte sve proizvode iz vruće ponude</button>
+            <button onclick="switchesSlide()" class="container__products__discounts__button container__products__discounts__button--yellow ">Pogledajte sve proizvode iz vruće ponude</button>
 
         </div>
 
@@ -744,22 +757,38 @@
                 Aperiam commodi cumque dicta, dignissimos,
                 dolores eveniet ex ipsa ipsum itaque maxime modi nemo numquam optio placeat quasi quis repellendus
                 reprehenderit repudiandae.</p>
-            <button class="container__side__button-blue">Opširnije</button>
+            <button class="container__side__button-blue" >Opširnije</button>
         </div>
     </div>
 
 
 </div>
-<div class="slider-two">
-    <ul id="slider2">
-        <li><img src="src/assets/gorenje.png" alt="Logo 1"></li>
-        <li><img src="src/assets/samsung.png" alt="Logo 2"></li>
-        <li><img src="src/assets/sony.png" alt="Logo 3"></li>
-        <li><img src="src/assets/pan.png" alt="Logo 3" style="margin-top: 20px"></li>
-        <li><img src="src/assets/panasonic.png" alt="Logo 3" style="margin-top: -30px"></li>
-
-    </ul>
+<div class="slider-brand">
+    <div class="slider-brand__box"></div>
+    <button class="slider-brand__controls slider-brand__controls--left" onclick="switchesSlide()"> < </button>
+    <div class="slider-brand__container" id="slider22-container">
+        <img class="slider-brand__img" src="src/assets/panasonic.png">
+        <img class="slider-brand__img" src="src/assets/gorenje.png">
+        <img class="slider-brand__img" src="src/assets/samsung.png">
+        <img class="slider-brand__img" src="src/assets/samsung.png">
+        <img class="slider-brand__img" src="src/assets/panasonic.png">
+        <img class="slider-brand__img" src="src/assets/panasonic.png">
+        <img class="slider-brand__img" src="src/assets/sony.png" alt="">
+        <img class="slider-brand__img" src="src/assets/hilti.jpg" alt="">
+        <img class="slider-brand__img" src="src/assets/sony.png" alt="">
+    </div>
+    <div class="slider-brand__box"></div>
+    <button class="slider-brand__controls slider-brand__controls--right" onclick="switchSlide()"> > </button>
 </div>
+
+
+<div class="overlay" id="popup">
+    <div class="overlay__popup" id="popup-container">
+
+    </div>
+</div>
+
+
 
 <div class="bottom-container">
 <div class="bottom-container__footer">
